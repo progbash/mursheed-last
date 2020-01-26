@@ -1,82 +1,47 @@
+$(document).ready(function(){
 let addRouteBtn = $(".add-route-btn");
 //table datas
-let fromRoute = $(".from-route-table")[0];
-let toRoute = $(".to-route-table")[0];
-let routePrice = $(".route-price-table")[0];
-let form = document.getElementById("addRouteForm");
+let fromRoute = $(".from-route");
+let toRoute = $(".route-to");
+let routePrice = $(".route-price");
+let form = $("#addRouteForm");
 
-function createRoute(data) {
+addRouteBtn.click(function(e){
+    e.preventDefault();
 
-    let route={
-        "FromRoute":"",
-        "ToRoute":"",
-        "Price":"",
-        "Info":""
-    }
-    
-    return route;
-}
+    $.validator.unobtrusive.parse(form);
 
-function readFormData() {
-    var formData = {};
-    $(form).find(":input").not(".add-route-btn").each(function () {
-        // The selector will match buttons; if you want to filter
-        // them out, check `this.tagName` and `this.type`; see
-        // below
-        // if (this.name == "ProductName") {
-        //     formData[this.name] = $("select[name='ProductId']").find('option:selected').text();
-        // } else if (this.name == "PersonnelFullname") {
-        //     formData[this.name] = $("select[name='PersonnelId']").find('option:selected').text();
-        // } else {
-        //     formData[this.name] = $(this).val();
-        // }
-    });
-    return formData;
-}
-function addRoute(){
-    $form=$(form);
-    $.validator.unobtrusive.parse($form);
-
-if($form.valid()){
-    alert("gul");
-
-    var dataArray = $addRouteForm.serializeArray()
-    dataObj = {};
-    console.log(dataArray);
-
-    
+    var dataArray = form.serializeArray(),
+        dataObj = {};
 
     $(dataArray).each(function (i, field) {
         dataObj[field.name] = field.value;
     });
 
-}else{
-    alert("bok");
-}
-}
-// addRouteBtn.click(function (e) {
-//     e.preventDefault();
+    function getData(dataValue){
+        return dataObj[dataValue];
+    }
 
-//     $.validator.unobtrusive.parse($addRouteForm);
+    if (form.valid()){
+        console.log(getData("routeFrom"));
+        console.log(getData("routeTo"));
+        console.log(getData("routePrice"));
+        
+        fromRoute.attr("value", getData("routeFrom"));
+        toRoute.attr("value", getData("routeTo"));
+        routePrice.attr("value", `$${getData("routeCost")}`);
+    } 
+    else {
+        alert("poks");
+    }
+});
 
-//     var dataArray = $addRouteForm.serializeArray(),
-//         dataObj = {};
+let editRouteBtn = $(".edit-route-btn");
+let deleteRouteBtn = $(".delete-route-btn");
+let saveRouteBtn = $(".save-route-btn");
 
-//     $(dataArray).each(function (i, field) {
-//         dataObj[field.name] = field.value;
-//     });
+editRouteBtn.click(function(){
+    alert("hello!");
+});
 
-//     function getData(dataValue){
-//         return dataObj[dataValue];
-//     }
-
-//     if ($addRouteForm.valid()){
-//         console.log(getData("routeTo"));
-//         fromRouteTable.attr("value", getData("routeFrom"));
-//         toRouteTable.attr("value", getData("routeTo"));
-//         routePriceTable.attr("value", `$${getData("routeCost")}`);
-//     } 
-//     else {
-//         alert("poks");
-//     }
-// });
+});
