@@ -384,11 +384,11 @@
                                             <span asp-validation-for="RoutePrice" class="text-danger"></span>
                                         </div>
                                         <div class="inputs">
-                                        <label for="" class="text-center">Add Route</label>
-                                        <div class="package-control-container justify-content-center">
+                                            <label for="" class="text-center">Add Route</label>
+                                            <div class="package-control-container justify-content-center">
                                             <button type="button" class="add-route-btn"><i
                                                     class="fas fa-plus"></i></button>
-                                        </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="new-route">
@@ -528,27 +528,55 @@
                         <!--#region avaible date-->
                     <div id="available" class="tab_content">
                         <div class="details">
+                            <form action="" id="addDateForm">
+                                <p class="heading">Add available dates</p>
+                                <div class="new_route">
+                                    <div class="form-group inputs">
+                                        <label asp-for="FromDate">From</label>
+                                        <input autocomplete="off" type="date" value="2020-01-01"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                        <span asp-validation-for="FromDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group inputs">
+                                        <label asp-for="ToDate">To</label>
+                                        <input autocomplete="off" type="date" value="2020-01-05"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                        <span asp-validation-for="ToDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="" class="text-center">Add Date</label>
+                                        <div class="package-control-container justify-content-center">
+                                        <button type="button" class="add-date-btn"><i
+                                                class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="available-date-info">
+                                    <div class="form-group inputs">
+                                        <label asp-for="RouteInfo" style="font-size: 14px;">Info</label>
+                                        <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
+                                        <span asp-validation-for="RouteInfo" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="details">
                             <form>
                                 <div class="inputs">
                                     <label for="available">Available dates</label>
                                     <div class="journey">
                                         <div class="details table-responsive">
-                                            <table id="driver-time-table" class="display" style="border: none;">
+                                            <table id="availableDateTable" class="table table-striped table-bordered  nowrap"
+                                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
-                                                    <tr>
-                                                        <th>From</th>
-                                                        <th>To</th>
+                                                    <tr class="text-center">
+                                                        <th>From date</th>
+                                                        <th>To Date</th>
+                                                        <th>Info</th>
+                                                        <th>#</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td><input autocomplete="off" type="date" value="2020-01-01"
-                                                                style="background-color: transparent; padding-left: 0; border: none;">
-                                                        </td>
-                                                        <td><input autocomplete="off" type="date" value="2020-01-05"
-                                                                style="background-color: transparent; padding-left: 0; border: none;">
-                                                        </td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -653,12 +681,12 @@
     <!-- dataTable -->
     <script src="plugin/datatable/datatables.min.js"></script>
     <script src="js/driver/profile/ride/datatable.init.js"></script>
-    <script src="js/driver/profile/route/datatable.init.js"></script>
-
+    <script src="js/driver/profile/route/dataTable.init.js"></script>
+    <script src="js/driver/profile/dates/dataTable.init.js"></script>
     <!-- custom -->
     <script src="js/profile_driver.js"></script>
     <script src="js/add-route.js"></script>
-    <script src="js/profile/profileTourist.js"></script>
+    <script src="js/add-date.js"></script>
     <script src="js/script.js"></script>
 </body>
 
