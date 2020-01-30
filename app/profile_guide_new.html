@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!--#region-->
     <header class="header">
         <div class="inner-header">
             <div class="container">
@@ -108,21 +109,26 @@
             </div>
         </div>
     </header>
+    <!--#endregion-->
     <section id="profile_driver">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
+                    <!--#region tab links-->
                     <div class="tab_headers">
                         <ul class="tabs">
-                            <li class="active"><a href="#personal">Personal info</a></li>
-                            <li><a href="#rides">Rides table</a></li>
+                            <li><a href="#personal">Personal info</a></li>
+                            <li class="active"><a href="#rides">Rides table</a></li>
                             <li><a href="#routes">Routes</a></li>
                             <li><a href="#account">Account</a></li>
                             <li><a href="#available">Available dates</a></li>
                         </ul>
                     </div>
+                    <!--#endregion-->
                 </div>
                 <div class="col-md-9">
+
+                    <!-- #region profile info-->
                     <div class="profile">
                         <div class="profile_img">
                             <img src="img/popular_location/rectangle2.jpg" alt="">
@@ -132,7 +138,6 @@
                             <p>User since date (12.12.19- 120 days)</p>
                         </div>
                         <div class="driver_info">
-                            <p>Total rides: 5</p>
                             <p>Rating: 4/5
                                 <!-- <div class="about_driver_info_ratings">
                                             <img src="./img/driver_details/star-copy.svg" alt="">
@@ -146,8 +151,12 @@
                             <p>Earning: 102</p>
                         </div>
                     </div>
-                    <div class="tab_container">    
-                    <div id="personal" class="tab_content">
+                    <!-- #endregion -->
+
+                    <!--#region tab-container-->
+                    <div class="tab_container">
+                        <!--#region personal-info-->
+                        <div id="personal" class="tab_content">
                             <div class="details">
                                 <form>
                                     <div class="inputs">
@@ -178,7 +187,7 @@
                                     <div class="inputs">
                                         <label for="country">Country</label>
                                         <select class="select2DropDown form-control" name="state" asp-for="CountryId"
-                                            asp-items="ViewBag.Countries">
+                                            asp-items="ViewBag.Countries" style="width: 100%;">
                                             <option>Azerbaijan</option>
                                             <option>Turkey</option>
                                             <option>Norway</option>
@@ -188,7 +197,7 @@
                                     <div class="form-group mb-0 inputs">
                                         <label asp-for="LanguageIds">Language</label>
                                         <select class="select2MultipleDropDown js-states form-control"
-                                            id="id_label_multiple" multiple="multiple">
+                                            id="id_label_multiple" multiple="multiple" style="width: 100%;">
                                             <option value="">Azerbaijani</option>
                                             <option value="">Russian</option>
                                             <option value="">English</option>
@@ -209,14 +218,17 @@
                                     </div>
                                 </form>
                             </div>
-                    </div>
-                    <div id="rides" class="tab_content">
+                        </div>
+                        <!--#endregion-->
+
+                        <!--#region rides-->
+                        <div id="rides" class="tab_content">
                             <div class="details">
                                 <form>
                                     <p>Journey</p>
                                     <div class="journey" style="padding:0; margin: 0; border: none;">
                                         <div class="details table-responsive" style="padding: 0;">
-                                            <table id="testDataLoad" class="table table-striped table-bordered  nowrap"
+                                            <table id="rideDataTable" class="table table-striped table-bordered  nowrap"
                                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
                                                     <tr>
@@ -244,88 +256,115 @@
                                     </div>
                                 </form>
                             </div>
-                    </div>
-                    <div id="routes" class="tab_content">
+                        </div>
+                        <!--#endregion rides-->
+
+                        <!--#region routes-->
+                        <div id="routes" class="tab_content">
                             <!-- <li class="icons">
-                                <i class="fas fa-pencil-alt"></i>
-                                <i class="fas fa-trash-alt"></i>
-                            </li> -->
+                                    <i class="fas fa-pencil-alt"></i>
+                                    <i class="fas fa-trash-alt"></i>
+                                </li> -->
                             <div class="details">
-                                <form action="" id="add-route-form">
+                                <form action="" id="addRouteForm">
                                     <p class="heading">Add new route</p>
                                     <div class="new_route">
-                                        <div class="inputs"">
-                                            <label for="">From</label>
-                                            <div class=" custom-selectbox">
-                                            <select class="route-from" name="routeFrom" required>
-                                                <option value="0">All languages</option>
-                                                <option value="Baku">Baku</option>
-                                                <option value="Ganja">Ganja</option>
+                                        <div class="form-group inputs">
+                                            <label asp-for="FromRoute">From</label>
+                                            <select class="select2DropDown formField route-from" name="routeFrom">
+                                                <option>Baku</option>
+                                                <option>Ganja</option>
+                                                <option>Mingachevir</option>
                                             </select>
+                                            <span asp-validation-for="FromRoute" class="text-danger"></span>
                                         </div>
-                                    </div>
-                                    <div class="inputs">
-                                        <label for="">To</label>
-                                        <div class="custom-selectbox">
-                                            <select class="route-to" name="routeTo" required>
-                                                <option value="0">All languages</option>
-                                                <option value="Sumgait">Sumgait</option>
-                                                <option value="Mingachevir">Mingachevir</option>
+                                        <div class="form-group inputs">
+                                            <label asp-for="ToRoute">To</label>
+                                            <select class="select2DropDown formField route-to" name="routeTo">
+                                                <option>Baku</option>
+                                                <option>Ganja</option>
+                                                <option>Mingachevir</option>
                                             </select>
+                                            <span asp-validation-for="FromRoute" class="text-danger"></span>
+                                        </div>
+                                        <div class="form-group inputs">
+                                            <label asp-for="RoutePrice">Price</label>
+                                            <input autocomplete="off" asp-for="RoutePrice" class="form-control formField route-price" 
+                                            type="text" name="routePrice"
+                                            placeholder="$100" autocomplete="off">
+                                            <span asp-validation-for="RoutePrice" class="text-danger"></span>
+                                        </div>
+                                        <div class="inputs">
+                                            <label for="" class="text-center">Add Route</label>
+                                            <div class="package-control-container justify-content-center">
+                                            <button type="button" class="add-route-btn"><i
+                                                    class="fas fa-plus"></i></button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="inputs"">
-                                            <label for="">Cost</label>
-                                            <input type=" number" class="route-price" autocomplete="off"
-                                        placeholder="100$" style="height: 36px;" name="routeCost" required min="1">
-                                    </div>
-                                    <div class="inputs">
-                                        <label for="">Add package</label>
-                                        <div class="package-control-container">
-                                            <button class="add-route-btn"><i class="fas fa-plus"></i></button>
+                                    <div class="new-route">
+                                        <div class="form-group inputs">
+                                            <label asp-for="RouteInfo" style="font-size: 14px;">Info</label>
+                                            <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
+                                            <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
                                     </div>
+                                </form>
                             </div>
-                            </form>
-                        </div>
-                        <div class="details">
+                            <div class="details">
                             <form>
                                 <div class="inputs">
                                     <label for="tourist_name">Routes</label>
                                     <div class="journey">
                                         <div class="details table-responsive">
-
-                                            <table id="driver-route-table" class="display">
+                                            <!-- <table id="routeTable" class="display">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Start date</th>
+                                                            <th>End date</th>
+                                                            <th>Total Cost</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input class="from-route-table" autocomplete="off"
+                                                                    type="datetime" disabled></td>
+                                                            <td><input class="to-route-table" autocomplete="off"
+                                                                    type="datetime" disabled></td>
+                                                            <td><input class="route-price-table" autocomplete="off" disabled
+                                                                    type="text"
+                                                                    style="width: 30%; outline: none; border: none;">
+                                                            </td>
+                                                            <td>
+                                                                <button>delete</button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table> -->
+                                            <table id="routeTable" class="table table-striped table-bordered  nowrap"
+                                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
-                                                    <tr>
-                                                        <th>Start date</th>
-                                                        <th>End date</th>
-                                                        <th>Total Cost</th>
+                                                    <tr class="text-center">
+                                                        <th>id</th>
+                                                        <th>from</th>
+                                                        <th>to</th>
+                                                        <th>price</th>
+                                                        <th>info</th>
+                                                        <th>#</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td><input class="from-route-table" autocomplete="off"
-                                                                type="datetime" disabled></td>
-                                                        <td><input class="to-route-table" autocomplete="off"
-                                                                type="datetime" disabled></td>
-                                                        <td><input class="route-price-table" autocomplete="off" disabled
-                                                                type="text"
-                                                                style="width: 30%; outline: none; border: none;">
-                                                        </td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
-                                            
                                         </div>
                                     </div>
                                 </div>
-                                <div class="save">
-                                    <button class="save-btn">Save changes</button>
-                                </div>
                             </form>
+                            </div>
                         </div>
-                    </div>
+                    <!--#endregion-->
+
+                        <!--#region account-->
                     <div id="account" class="tab_content">
                         <div class="details">
                             <div class="form-group inputs">
@@ -395,29 +434,60 @@
                             </div>
                         </div>
                     </div>
+                    <!--#endregion-->
+
+                        <!--#region avaible date-->
                     <div id="available" class="tab_content">
+                        <div class="details">
+                            <form action="" id="addDateForm">
+                                <p class="heading">Add available dates</p>
+                                <div class="new_route">
+                                    <div class="form-group inputs">
+                                        <label asp-for="FromDate">From</label>
+                                        <input autocomplete="off" type="date" value="2020-01-01"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                        <span asp-validation-for="FromDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group inputs">
+                                        <label asp-for="ToDate">To</label>
+                                        <input autocomplete="off" type="date" value="2020-01-05"
+                                                                style="background-color: transparent; padding-left: 0; border: none;">
+                                        <span asp-validation-for="ToDate" class="text-danger"></span>
+                                    </div>
+                                    <div class="inputs">
+                                        <label for="" class="text-center">Add Date</label>
+                                        <div class="package-control-container justify-content-center">
+                                        <button type="button" class="add-date-btn"><i
+                                                class="fas fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="available-date-info">
+                                    <div class="form-group inputs">
+                                        <label asp-for="RouteInfo" style="font-size: 14px;">Info</label>
+                                        <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
+                                        <span asp-validation-for="RouteInfo" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                         <div class="details">
                             <form>
                                 <div class="inputs">
                                     <label for="available">Available dates</label>
                                     <div class="journey">
                                         <div class="details table-responsive">
-                                            <table id="driver-time-table" class="display" style="border: none;">
+                                            <table id="availableDateTable" class="table table-striped table-bordered  nowrap"
+                                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
-                                                    <tr>
-                                                        <th>From</th>
-                                                        <th>To</th>
+                                                    <tr class="text-center">
+                                                        <th>From date</th>
+                                                        <th>To Date</th>
+                                                        <th>Info</th>
+                                                        <th>#</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td><input autocomplete="off" type="date" value="2020-01-01"
-                                                                style="background-color: transparent; padding-left: 0; border: none;">
-                                                        </td>
-                                                        <td><input autocomplete="off" type="date" value="2020-01-05"
-                                                                style="background-color: transparent; padding-left: 0; border: none;">
-                                                        </td>
-                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -429,12 +499,16 @@
                             </form>
                         </div>
                     </div>
+                    <!--#endregion-->
+                    </div>
+                <!--#endregion-->
                 </div>
+                <div class="col-md-1"></div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
         </div>
     </section>
+
+    <!--#region footer-->
     <footer>
         <div class="container">
             <div class="wrapper">
@@ -500,23 +574,29 @@
             </div>
         </div>
     </footer>
+    <!--#endregion-->
+
+    <!-- plugin -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="plugin/jquery-validate/jquery.validate.min.js"></script>
     <script src="plugin/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <script src="js/selectbox.js"></script>
-    <script src="js/tabs.js"></script>
-    <script src="js/accordion.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/SwalUtility.js" asp-append-version="true"></script>
-    <script src="js/jquery.steps.min.js"></script>
-    <script src="js/jquery.form-wizard.init.js"></script>
-    <script src="js/select2.min.js"></script>
-    <script src="js/driverRegister.js" asp-append-version="true"></script>
-    <script src="plugin/datatable/datatables.min.js"></script>
-    <script src="js/profile_driver.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/profile/profileTourist.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+
+    <!-- select2 -->
+    <script src="js/select2.min.js"></script>
+    <script src="js/driver/profile/select2.init.js"></script>
+
+    <!-- dataTable -->
+    <script src="plugin/datatable/datatables.min.js"></script>
+    <script src="js/guide/profile/ride/datatable.init.js"></script>
+    <script src="js/guide/profile/route/dataTable.init.js"></script>
+    <script src="js/guide/profile/dates/dataTable.init.js"></script>
+    <!-- custom -->
     <script src="js/add-route.js"></script>
+    <script src="js/add-date.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
