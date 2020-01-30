@@ -1,0 +1,9 @@
+{
+    "data": [
+        {
+            "fromDate": "2020\/04\/20",
+            "toDate": "2020\/04\/25",
+            "dateInfo": "I'm free in this period."
+        }
+    ]
+}

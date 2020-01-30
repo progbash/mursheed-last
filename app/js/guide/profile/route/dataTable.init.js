@@ -65,7 +65,8 @@ $(document).ready(function () {
             }
         }
     });
-    //#region row Details
+
+//#region row Details
 var detailRows = [];
 
 $('#routeTable tbody').on('click',
@@ -153,7 +154,7 @@ function format2(row) {
 }
 //#endregion
 function readSelectData(row) {
-    let selectStart = "<select disabled style='color:black' class='select2DropDown formField routeSelect text-center'>"
+    let selectStart = "<select disabled style='color:black' class='select2RouteDropDown formField routeSelect text-center'>"
     let selectEnd = "</select>";
     Array.prototype.forEach.call(row,
         function (item) {

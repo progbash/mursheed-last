@@ -1,36 +1,21 @@
 $(document).ready(function () {
-    // $('.select2MultipleDropDown').select2();
-    // $('.select2DropDown').select2();
-    var routeTable = $('#routeTable').DataTable({
+    var availableDateTable = $('#availableDateTable').DataTable({
         "processing": true, // for show progress bar
         "serverSide": true, // for process server side
         "filter": true, // this is for disable filter (search box)
         "orderMulti": false, // for disable multiple column at once
         "ordering": false,
-        "ajax": "routes.txt",
+        "ajax": "dates.txt",
 
         "columns": [
             {
-                "data": "id",
-                "class": "text-center pt-3",
+                "data": "fromDate",
+                "class": "text-center pt-3 availableDate",
             },
             {
-                "data": "fromRoute",
-                render: function (row) {
-                    return readSelectData(row);
-                }
+                "data": "toDate",
+                "class": "text-center pt-3 availableDate",
             },
-            {
-                "data": "toRoute",
-                render: function (row) {
-                    return readSelectData(row);
-                }
-            },
-            {
-                "data": "price", 
-                "class": "text-center pt-3 routePrice",
-            },
-            // icon deyisecek todo
             {
                 "data": null,
                 "className": 'details-control',
@@ -43,13 +28,13 @@ $(document).ready(function () {
                     return `
                         <ul class="m-0 p-0 d-flex justify-content-center">
                             <li class=" list-group mr-2">
-                                <a onclick="editItem(this)" class='edit-route-btn btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
+                                <a onclick="editDate(this)" class='edit-date-btn btn text-primary btn-sm'><i class='fa fa-edit'></i></a>
                             </li>
                             <li class="list-group">
-                                <a onclick="deleteItem(this)" class="delete-rout-btn btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                <a onclick="deleteDate(this)" class="delete-date-btn btn text-danger btn-sm"><i class="fa fa-trash"></i></a>
                             </li>
                             <li class="list-group">
-                                <a onclick="saveItem(this)" class="save-route-btn btn text-success btn-sm"><i class="fas fa-check"></i></a>
+                                <a onclick="saveDate(this)" class="save-date-btn btn text-success btn-sm"><i class="fas fa-check"></i></a>
                             </li>
                         </ul>`;
                 }
@@ -69,12 +54,13 @@ $(document).ready(function () {
 //#region row Details
 var detailRows = [];
 
-$('#routeTable tbody').on('click',
+
+$('#availableDateTable tbody').on('click',
     'tr td.details-control',
     function () {
 
         var tr = $(this).closest('tr');
-        var row = routeTable.row(tr);
+        var row = availableDateTable.row(tr);
         var idx = $.inArray(tr.attr('id'), detailRows);
 
         if (row.child.isShown()) {
@@ -86,7 +72,7 @@ $('#routeTable tbody').on('click',
         } else {
             tr.addClass('shown');
             tr.addClass('details');
-            row.child(format2(row.data())).show();
+            row.child(format3(row.data())).show();
 
             // Add to the 'open' array
             if (idx === -1) {
@@ -102,7 +88,7 @@ $('#btn-show-all-children').on('click',
             // If row has details collapsed
             if (!this.child.isShown()) {
                 // Open this row
-                this.child(format2(this.data())).show();
+                this.child(format3(this.data())).show();
                 $(this.node()).addClass('shown');
             }
         });
@@ -121,7 +107,7 @@ $('#btn-hide-all-children').on('click',
         });
 });
 
-routeTable.on('draw',
+availableDateTable.on('draw',
     function () {
         $.each(detailRows,
             function (i, id) {
@@ -131,36 +117,16 @@ routeTable.on('draw',
 //#endregion
 });
 
-function format2(row) {
-
+function format3(row) {
     var card = `<div>
-                    <h4 class="header-title text-center header-title p-2">Route Info</h4>`,
-
+                    <h4 class="header-title text-center header-title p-2">Available Date Info</h4>`,
         cardEnd = `</div>`,
-        // route table
-        routeInfoTable = `<textarea disabled class='routeInfoTextarea' rows='2' style="width: 100%; background-color: #F2F2F2;" >`,
-        routeInfoTableEnd = `</textarea>`;
+        dateInfoTextarea = `<textarea disabled class='dateInfoTextarea' rows='2' style="width: 100%; background-color: #F2F2F2;" >`,
+        dateInfoTextareaEnd = `</textarea>`;
 
-
-    // region table
-
-    // table first row
-    routeInfoTable+=`${row.info}`;
-    routeInfoTable += routeInfoTableEnd;
-    //#endregion DocDirection and DocDirectionDetails
-    card += routeInfoTable;
+    dateInfoTextarea+=`${row.dateInfo}`;
+    dateInfoTextarea += dateInfoTextareaEnd;
+    card += dateInfoTextarea;
     card += cardEnd;
     return card;
 }
-//#endregion
-function readSelectData(row) {
-    let selectStart = "<select disabled style='color:black' class='select2RouteDropDown formField routeSelect text-center'>"
-    let selectEnd = "</select>";
-    Array.prototype.forEach.call(row,
-        function (item) {
-            selectStart += `<option value="${item.id}">${item.name}</option>`;
-        });
-    selectStart += selectEnd;
-    return selectStart;
-}
-
