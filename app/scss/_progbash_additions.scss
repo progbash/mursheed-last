@@ -303,3 +303,19 @@ ul.dashed>li:before {
     width: 100% !important;
     margin: auto;
 }
+
+
+.routeSelect{
+    width: 100% !important;
+    padding: 8px !important;
+}
+.routeInfoTextarea{
+    border: none;
+}
+.sub-menu {
+    transition: height .3s ease;
+    overflow: hidden;
+}
+.sub-menu:not(.d-block) {
+    display: none;
+}

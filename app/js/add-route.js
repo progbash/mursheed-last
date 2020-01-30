@@ -34,14 +34,25 @@ addRouteBtn.click(function(e){
     else {
         alert("poks");
     }
+    });
 });
 
 let editRouteBtn = $(".edit-route-btn");
 let deleteRouteBtn = $(".delete-route-btn");
 let saveRouteBtn = $(".save-route-btn");
 
-editRouteBtn.click(function(){
-    alert("hello!");
-});
-
-});
+function editItem(elem){
+    $(elem).closest("tr").find(".routeSelect").prop("disabled", false);
+    $(elem).closest("tr").find(".routeSelect").parent().prop("style", "background-color: white !important;");
+    $(".routeInfoTextarea").prop("disabled", false).css("background-color", "white").css("border", "1px solid #007BFF");
+    $(elem).closest("tr").find(".routePrice").prop("contenteditable", true).css("outline", "none").css("color", "#007BFF");
+}
+function deleteItem(elem){
+    $(elem).closest("tr").remove();
+}
+function saveItem(elem){
+    $(elem).closest("tr").find(".routeSelect").prop("disabled", true);
+    $(elem).closest("tr").find(".routeSelect").parent().removeProp("style");
+    $(".routeInfoTextarea").prop("disabled", true).css("background-color", "#F2F2F2").css("border", "none");
+    $(elem).closest("tr").find(".routePrice").prop("contenteditable", false).css("outline", "none").css("color", "#000");;
+}

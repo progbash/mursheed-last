@@ -189,7 +189,7 @@
                                     <div class="inputs">
                                         <label for="country">Country</label>
                                         <select class="select2DropDown form-control" name="state" asp-for="CountryId"
-                                            asp-items="ViewBag.Countries">
+                                            asp-items="ViewBag.Countries" style="width: 100%;">
                                             <option>Azerbaijan</option>
                                             <option>Turkey</option>
                                             <option>Norway</option>
@@ -199,7 +199,7 @@
                                     <div class="form-group mb-0 inputs">
                                         <label asp-for="LanguageIds">Language</label>
                                         <select class="select2MultipleDropDown js-states form-control"
-                                            id="id_label_multiple" multiple="multiple">
+                                            id="id_label_multiple" multiple="multiple" style="width: 100%;">
                                             <option value="">Azerbaijani</option>
                                             <option value="">Russian</option>
                                             <option value="">English</option>
@@ -384,11 +384,18 @@
                                             <span asp-validation-for="RoutePrice" class="text-danger"></span>
                                         </div>
                                         <div class="inputs">
-                                        <label for="">Add Route</label>
-                                        <div class="package-control-container">
+                                        <label for="" class="text-center">Add Route</label>
+                                        <div class="package-control-container justify-content-center">
                                             <button type="button" class="add-route-btn"><i
                                                     class="fas fa-plus"></i></button>
                                         </div>
+                                        </div>
+                                    </div>
+                                    <div class="new-route">
+                                        <div class="form-group inputs">
+                                            <label asp-for="RouteInfo" style="font-size: 14px;">Info</label>
+                                            <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
+                                            <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
                                     </div>
                                 </form>
@@ -426,11 +433,12 @@
                                             <table id="routeTable" class="table table-striped table-bordered  nowrap"
                                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                 <thead>
-                                                    <tr>
+                                                    <tr class="text-center">
                                                         <th>id</th>
                                                         <th>from</th>
                                                         <th>to</th>
                                                         <th>price</th>
+                                                        <th>info</th>
                                                         <th>#</th>
                                                     </tr>
                                                 </thead>
@@ -445,7 +453,7 @@
                         </div>
                     <!--#endregion-->
 
-                    <!--#region account-->
+                        <!--#region account-->
                     <div id="account" class="tab_content">
                         <div class="details">
                             <div class="form-group inputs">
@@ -517,7 +525,7 @@
                     </div>
                     <!--#endregion-->
 
-                    <!--#region avaible date-->
+                        <!--#region avaible date-->
                     <div id="available" class="tab_content">
                         <div class="details">
                             <form>
@@ -553,12 +561,12 @@
                         </div>
                     </div>
                     <!--#endregion-->
-                </div>
+                    </div>
                 <!--#endregion-->
 
+                </div>
+                <div class="col-md-1"></div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
         </div>
     </section>
 
