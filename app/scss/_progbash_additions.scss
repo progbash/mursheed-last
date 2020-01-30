@@ -103,7 +103,6 @@ input[type=range]:focus::-ms-fill-upper {
     background: #1e9382;
 }
 
-//guide_register.hmtl, tourist_register.html
 
 
 #login_register .wrapper .form .inputs input{
@@ -122,36 +121,6 @@ input[type="file"] {
     padding: 10px 15px !important;
 }
 
-.select2-selection__rendered {
-    background-color: #f7f7f7;
-}
-
-.select2-container--default .select2-selection--multiple {
-    background-color: transparent;
-    border: 1px solid #dfdfdf;
-    height: auto !important;
-}
-
-.select2-search__field {
-    height: 40px !important;
-    border: none !important;
-    margin: 0px !important;
-    padding: 0px 5px !important;
-    background-color: #f7f7f7 !important;
-}
-.select2-selection--multiple {
-    border: 1px solid #dfdfdf !important;
-    background-color: #f7f7f7 !important;
-}
-
-select.form-control {
-    background-color: transparent !important;
-    height: 46px !important;
-}
-
-.select2-selection__rendered {
-    height: 100%;
-}
 
 .custom-container {
     width: 80%;
@@ -187,26 +156,7 @@ ul.dashed>li:before {
     padding: 10px 0px !important;
 }
 
-//driver_register.html
-.select2-selection--single{
-    height: 46px !important; 
-    padding: 8px 10px;
-}
-.select2-selection__rendered{
-    color: #000;
-}
-.select2-selection__arrow{
-    margin-top: 10px;
-}
-.select2-selection--single {
-    border: 1px solid #dfdfdf !important;
-    background-color: #f7f7f7 !important;
-}
 
-.select2-container--default .select2-results__option--highlighted[aria-selected] {
-    background-color: #E5E5E5 !important;
-    color: black !important;
-}
 .custom-offers-container{
     padding: 0;
     margin: auto;
@@ -230,6 +180,7 @@ ul.dashed>li:before {
 #swiper_popular_attractions_locations .swiper-slide a:hover{
     text-decoration: none;
 }
+
 
 //custom small navigation bar for mobile devices
 .small-menu nav{
@@ -283,28 +234,22 @@ ul.dashed>li:before {
     transition: .3s ease;
     color: rgb(0,128,114);    
 }
-
 .small-menu{
     display: none;
 }
+
+
+
 
 #login_register .wrapper .form .InputGroup{
     flex-wrap: wrap;
     justify-content: center;
     align-self: center;
 }
-
-// #login_register .wrapper .form .InputGroup label{
-//     width: 30% !important;
-//     margin: 10px auto;
-// }
-
 #login_register .wrapper .form .submit_reg{
     width: 100% !important;
     margin: auto;
 }
-
-
 .routeSelect{
     width: 100% !important;
     padding: 8px !important;

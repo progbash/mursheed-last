@@ -1,0 +1,52 @@
+.select2-selection__rendered {
+    background-color: #f7f7f7;
+}
+
+.select2-container--default .select2-selection--multiple {
+    background-color: transparent;
+    border: 1px solid #dfdfdf;
+    height: auto !important;
+}
+
+.select2-search__field {
+    height: 40px !important;
+    border: none !important;
+    margin: 0px !important;
+    padding: 0px 5px !important;
+    background-color: #f7f7f7 !important;
+}
+.select2-selection--multiple {
+    border: 1px solid #dfdfdf !important;
+    background-color: #f7f7f7 !important;
+}
+
+select.form-control {
+    background-color: transparent !important;
+    height: 46px !important;
+}
+
+.select2-selection__rendered {
+    height: 100%;
+}
+
+
+//driver_register.html
+.select2-selection--single{
+    height: 46px !important; 
+    padding: 8px 10px;
+}
+.select2-selection__rendered{
+    color: #000;
+}
+.select2-selection__arrow{
+    margin-top: 10px;
+}
+.select2-selection--single {
+    border: 1px solid #dfdfdf !important;
+    background-color: #f7f7f7 !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #E5E5E5 !important;
+    color: black !important;
+}
