@@ -165,36 +165,30 @@
                                     <div class="plus"><i class="fas fa-minus"></i></div>
                                 </div>
                                 <div class="item_body by_car">
+                                    <!--#region custom selectbox-->
                                     <div class="custom-selectbox">
+                                        <!-- <select class="select2DropDownBrand" name="state" asp-for="#" asp-items="#" style="width: 100%;"> -->
                                         <select>
-                                            <option value="0">All types</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
+                                            <option>Brand</option>
+                                            <option>Audi</option>
+                                            <option>BMW</option>
+                                            <option>Citroen</option>
+                                            <option>Ford</option>
+                                            <option>Honda</option>
                                         </select>
                                     </div>
                                     <div class="custom-selectbox">
+                                        <!-- <select class="select2DropDownModel" name="state" asp-for="#" asp-items="#" style="width: 100%;"> -->
                                         <select>
-                                            <option value="0">All cars</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
+                                            <option>Model</option>
+                                            <option>Audi</option>
+                                            <option>BMW</option>
+                                            <option>Citroen</option>
+                                            <option>Ford</option>
+                                            <option>Honda</option>
                                         </select>
                                     </div>
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All models</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
-                                        </select>
-                                    </div>
+                                    <!--#endregion-->
                                 </div>
                             </div>
                             <div class="border"></div>
@@ -522,10 +516,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="js/accordion.js"></script>
    <script src="js/selectbox.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="js/navbar.js"></script>
+   <script src="js/select2.min.js"></script>
+   <script src="js/guides_drivers_select2.init.js"></script>
+   
 </body>
 
 </html>

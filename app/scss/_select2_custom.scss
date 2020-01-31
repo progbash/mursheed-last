@@ -40,6 +40,10 @@ select.form-control {
 }
 .select2-selection__arrow{
     margin-top: 10px;
+    
+}
+.select2-selection__clear{
+    display: none;
 }
 .select2-selection--single {
     border: 1px solid #dfdfdf !important;
