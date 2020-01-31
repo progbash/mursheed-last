@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
     <style>
     </style>
 </head>
@@ -146,13 +147,13 @@
 
                                 </div>
                                 <div class="item_body">
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All cities</option>
-                                            <option value="1">Baku</option>
-                                            <option value="2">Qazax</option>
-                                            <option value="3">Ganja</option>
-                                            <option value="4">Shaki</option>
+                                    <div class="inputs" style="width: 100%;">
+                                        <select class="select2DropDownCity" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
+                                            <option>By city</option>
+                                            <option>Baku</option>
+                                            <option>Gabala</option>
+                                            <option>Ganja</option>
                                         </select>
                                     </div>
                                 </div>
@@ -166,9 +167,9 @@
                                 </div>
                                 <div class="item_body by_car">
                                     <!--#region custom selectbox-->
-                                    <div class="custom-selectbox">
-                                        <!-- <select class="select2DropDownBrand" name="state" asp-for="#" asp-items="#" style="width: 100%;"> -->
-                                        <select>
+                                    <div class="inputs">
+                                        <select class="select2DropDownBrand" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
                                             <option>Brand</option>
                                             <option>Audi</option>
                                             <option>BMW</option>
@@ -177,9 +178,9 @@
                                             <option>Honda</option>
                                         </select>
                                     </div>
-                                    <div class="custom-selectbox">
-                                        <!-- <select class="select2DropDownModel" name="state" asp-for="#" asp-items="#" style="width: 100%;"> -->
-                                        <select>
+                                    <div class="inputs">
+                                        <select class="select2DropDownModel" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
                                             <option>Model</option>
                                             <option>Audi</option>
                                             <option>BMW</option>
