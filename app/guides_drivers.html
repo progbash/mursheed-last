@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/select2.min.css" rel="stylesheet" />
     <style>
     </style>
 </head>
@@ -146,13 +147,13 @@
 
                                 </div>
                                 <div class="item_body">
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All cities</option>
-                                            <option value="1">Baku</option>
-                                            <option value="2">Qazax</option>
-                                            <option value="3">Ganja</option>
-                                            <option value="4">Shaki</option>
+                                    <div class="inputs" style="width: 100%;">
+                                        <select class="select2DropDownCity" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
+                                            <option>By city</option>
+                                            <option>Baku</option>
+                                            <option>Gabala</option>
+                                            <option>Ganja</option>
                                         </select>
                                     </div>
                                 </div>
@@ -165,36 +166,30 @@
                                     <div class="plus"><i class="fas fa-minus"></i></div>
                                 </div>
                                 <div class="item_body by_car">
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All types</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
+                                    <!--#region custom selectbox-->
+                                    <div class="inputs">
+                                        <select class="select2DropDownBrand" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
+                                            <option>Brand</option>
+                                            <option>Audi</option>
+                                            <option>BMW</option>
+                                            <option>Citroen</option>
+                                            <option>Ford</option>
+                                            <option>Honda</option>
                                         </select>
                                     </div>
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All cars</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
+                                    <div class="inputs">
+                                        <select class="select2DropDownModel" name="state" asp-for="#" asp-items="#" style="width: 100%;">
+                                        <!-- <select> -->
+                                            <option>Model</option>
+                                            <option>Audi</option>
+                                            <option>BMW</option>
+                                            <option>Citroen</option>
+                                            <option>Ford</option>
+                                            <option>Honda</option>
                                         </select>
                                     </div>
-                                    <div class="custom-selectbox">
-                                        <select>
-                                            <option value="0">All models</option>
-                                            <option value="1">Audi</option>
-                                            <option value="2">BMW</option>
-                                            <option value="3">Citroen</option>
-                                            <option value="4">Ford</option>
-                                            <option value="5">Honda</option>
-                                        </select>
-                                    </div>
+                                    <!--#endregion-->
                                 </div>
                             </div>
                             <div class="border"></div>
@@ -522,10 +517,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="js/accordion.js"></script>
    <script src="js/selectbox.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    <script src="js/navbar.js"></script>
+   <script src="js/select2.min.js"></script>
+   <script src="js/guides_drivers_select2.init.js"></script>
+   
 </body>
 
 </html>
