@@ -1,0 +1,69 @@
+.support-header{
+    background-color: #1A7F70;
+    min-height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 50px 0px;
+    .support-header-container{
+        display: flex;
+        align-items: center;
+    }
+    .support-faq .item_body p{
+        color: #1A7F70;
+        font-size: .8em;
+    }
+}
+.support-badges{
+    background-color: #F7F7F7;
+    min-height: 400px;
+
+    .support-badge-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .custom-badge{
+            width: 300px;
+            height: 250px;
+            margin: 75px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            border-radius: 5px;
+            
+            i{
+                font-size: 2em;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: .8em;
+            }
+        }
+        .first-badge{
+            background-color: #306594;
+        }
+        .second-badge{
+            background-color: #593194;
+        }
+        .third-badge{
+            background-color: #2CBD85;
+        }
+    }
+}
+
+@media screen and (max-width:990px){
+    .support-header-left{
+        text-align: center;
+    }
+    .custom-badge{
+        margin-top: 30px !important;
+        margin-bottom: 0px !important;
+    }
+    .third-badge{
+        margin-bottom: 30px !important;
+    }
+}
