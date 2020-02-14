@@ -36,6 +36,13 @@
                 position: static;
                 .swiper-wrapper {
                     .swiper-slide {
+                        a{
+                            color: black;
+                            text-decoration: none;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
                         text-align: center;
                         font-size: 18px;
                         background: #fff;
