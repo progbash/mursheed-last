@@ -226,3 +226,25 @@
         }
     }
 }
+
+
+.driver-reg-label{
+    display: inherit;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    position: relative;
+}
+.driver-reg-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    background-color: rgba(0,0,0, .7);
+    border-radius: 4px;
+    height: 141px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
