@@ -1,0 +1,16 @@
+.flight_details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;
+
+    .aviacompany_img{
+        width: 20%;
+    }
+
+    .aviacompany_details{
+        h4{
+            font-size: 1.2em;
+        }
+    }
+}
