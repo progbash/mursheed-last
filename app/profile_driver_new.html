@@ -349,6 +349,44 @@
                         <!--#endregion rides-->
 
                         <!--#region routes-->
+                        <div class="edit-route-overlay">
+                            <div class="edit-route-modal">
+                                <div class="custom-container">
+                                    <div class="edit-route-modal-header">
+                                        <i class="fas fa-times float-right" onclick="closeEditModal()"></i>
+                                    </div>
+                                    <div class="edit-route-modal-inputs">
+                                        <form action="">
+                                            <div class="form-group inputs">
+                                                <label asp-for="FromRoute">From</label>
+                                                <select class="select2DropDown formField route-from" name="routeFrom">
+                                                    <option>Baku</option>
+                                                    <option>Ganja</option>
+                                                    <option>Mingachevir</option>
+                                                </select>
+                                                <span asp-validation-for="FromRoute" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group inputs">
+                                                <label asp-for="FromRoute">To</label>
+                                                <select class="select2DropDown formField route-to" name="routeFrom">
+                                                    <option>Ganja</option>
+                                                    <option>Gabala</option>
+                                                    <option>Mingachevir</option>
+                                                </select>
+                                                <span asp-validation-for="FromRoute" class="text-danger"></span>
+                                            </div>
+                                            <label for="">Price</label><br>
+                                            <input type="text"><br>
+                                            <label for="">Info</label><br>
+                                            <textarea rows="5"></textarea>
+                                        </form>
+                                        <div class="save">
+                                            <button class="save-btn">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <div id="routes" class="tab_content">
                             <!-- <li class="icons">
                                     <i class="fas fa-pencil-alt"></i>

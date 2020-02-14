@@ -42,10 +42,14 @@ let deleteRouteBtn = $(".delete-route-btn");
 let saveRouteBtn = $(".save-route-btn");
 
 function editItem(elem){
-    $(elem).closest("tr").find(".routeSelect").prop("disabled", false);
-    $(elem).closest("tr").find(".routeSelect").parent().prop("style", "background-color: white !important;");
-    $(".routeInfoTextarea").prop("disabled", false).css("background-color", "white").css("border", "1px solid #007BFF");
-    $(elem).closest("tr").find(".routePrice").prop("contenteditable", true).css("outline", "none").css("color", "#007BFF");
+    // $(elem).closest("tr").find(".routeSelect").prop("disabled", false);
+    // $(elem).closest("tr").find(".routeSelect").parent().prop("style", "background-color: white !important;");
+    // $(".routeInfoTextarea").prop("disabled", false).css("background-color", "white").css("border", "1px solid #007BFF");
+    // $(elem).closest("tr").find(".routePrice").prop("contenteditable", true).css("outline", "none").css("color", "#007BFF");
+    $(".edit-route-overlay").css("display", "flex");
+}
+function closeEditModal(){
+    $(".edit-route-overlay").css("display", "none");
 }
 function deleteItem(elem){
     $(elem).closest("tr").remove();
