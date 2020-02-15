@@ -1,0 +1,62 @@
+.location-card-container{
+    width: 234.75px;
+    margin-right: 20px;
+    a{
+        color: black;
+        &:hover{
+            text-decoration: none;
+        }
+        .location-card{
+            margin: 1px;
+            -webkit-box-shadow: 0 0 0 1px #c9c9c9;
+            box-shadow: 0 0 0 1px #c9c9c9;
+            border-radius: 3px;
+            text-align: left;
+        }
+        .location-img{
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        p{
+            margin-left: 12px;
+            font-family: Averta;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+        .location-card-name{
+            margin-left: 12px;
+            font-family: Averta;
+            font-size: 16px;
+            font-weight: 600;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: normal;
+        }
+        .location-card-ratings{
+            display: flex;
+            -webkit-box-pack: left;
+            -webkit-justify-content: left;
+            -ms-flex-pack: left;
+            justify-content: left;
+            img{
+                width: 20px;
+                margin-bottom: 4px;
+                margin-left: 10px;
+            }
+            p{
+                margin-left: 11px;
+                font-family: Averta;
+                font-size: 13px;
+                margin-bottom: 4px;
+            }
+            span{
+                font-family: Averta;
+                font-size: 13px;
+                color: #888;
+                line-height: 26px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
