@@ -83,6 +83,7 @@
                             .most_popular_drivers_bottom_item_ratings{
                                 display: flex;
                                 justify-content: left;
+                                align-items: center;
                                 // align-items: baseline;
                                 img{
                                     width: 20px;
@@ -100,7 +101,8 @@
                                     font-size: 13px;
                                     color: #888888;
                                     line-height: 26px;
-                                    margin-left: 10px;                                
+                                    margin-left: 10px;    
+                                    margin-bottom: 5px;                            
                                 }
                             }
                             p{
