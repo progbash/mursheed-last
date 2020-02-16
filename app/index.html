@@ -10,6 +10,7 @@
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="./libs/swiper/package/css/swiper.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <link href="css/select2.min.css" rel="stylesheet"/>
     <style>
     </style>
 </head>
@@ -207,7 +208,13 @@
                 <h6>Start your journey</h6>
             </div>
             <div class="start_your_journey_bottom">
-                <input autocomplete="off" type="text" placeholder="Country">
+                <select class="select2DropDownCountry formField" name="">
+                    <option value="">Country</option>
+                    <option>Azerbaijan</option>
+                    <option>Turkey</option>
+                    <option>SAA</option>
+                </select>
+                <!-- <input autocomplete="off" type="text" placeholder="City"> -->
                 <input autocomplete="off" type="text" placeholder="City">
                 <input autocomplete="off" type="date" placeholder="Date" id="journey_date">
                 <button class="btn">Search</button>
@@ -703,6 +710,7 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="./libs/swiper/package/js/swiper.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/swiper_most_popular_drivers.js"></script>
@@ -712,8 +720,9 @@
     <script src="js/swiper_crated_for.js"></script>
     <script src="js/selectbox.js"></script>
     <script src="js/disable_calendar.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.init.js"></script>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/driver/driver-img-ratio.js"></script>
     <script src="js/navbar.js"></script>
 </body>

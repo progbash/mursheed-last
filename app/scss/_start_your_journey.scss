@@ -17,16 +17,34 @@
     .start_your_journey_bottom{
         display: flex;
         justify-content: center;
-        input{
+        .select2-selection--single{
+          padding: 5px 5px;
+          height: 40px !important;
+          text-align: left;
+          margin: 0px 5px;
+          color: lightgray;
+          border: 1px solid #888 !important;
+          background: #fff !important;
+          outline: none;
+          .select2-selection__rendered{
+            color: gray;
+            background-color: white;
+            outline: none;
+          }
+          .select2-selection__arrow{
+            margin: 5px 5px !important;
+          }
+        }
+        input, select{
             width: 20%;
             margin: 0 5px;
-            height: 40px;
+            height: 40px !important;
             border-radius: 4px;
             border: solid 1px #888888;
             padding-left: 15px;
             outline:none;
             box-shadow:none;
-           
+            background-color: white;
         }
         input[type="date"] {
             display:block;
