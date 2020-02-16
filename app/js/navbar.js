@@ -2,8 +2,6 @@ let menuBtn = document.getElementById("menu-btn");
 let subMenu = document.getElementsByClassName("sub-menu")[0];
 
 menuBtn.addEventListener("click", function(event){
-    //subMenu.classList.toggle("d-block");
-
     event.preventDefault();
 
     if (!subMenu.classList.contains('d-block')) {
@@ -27,4 +25,11 @@ menuBtn.addEventListener("click", function(event){
             once: true
         });
     }
+});
+
+let profileBtn = document.getElementsByClassName("profile-nav")[0];
+let loginRegBtns = document.getElementsByClassName("login-reg-btns")[0];
+
+profileBtn.addEventListener("click", function(event){
+    loginRegBtns.classList.toggle("d-flex");
 });

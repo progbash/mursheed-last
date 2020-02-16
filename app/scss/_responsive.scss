@@ -132,8 +132,30 @@
     .inside-inner{
         display: none !important;
     }
+    .login-reg-btns{
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+    }
     .inside-inner-mobile{
         display: block;
+        .left-side-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .profile-nav{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #0b8071;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                i{
+                    color: white;
+                }
+            }
+        }
         .currency-country{
             margin-left: 15px;
             margin-right: 15px;
