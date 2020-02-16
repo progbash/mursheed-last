@@ -184,12 +184,10 @@ ul.dashed>li:before {
 
 //custom small navigation bar for mobile devices
 .small-menu nav{
-    padding-top: 15px;
-    padding-bottom: 15px;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: flex-end;
 }
 .right-side-nav{
     display: flex;
@@ -203,7 +201,6 @@ ul.dashed>li:before {
 .small-menu i{
     font-size: 2em;
     cursor: pointer;
-    padding-top: 25px;
 }
 .small-menu i:hover{
     transition: .3s ease;
@@ -228,7 +225,7 @@ ul.dashed>li:before {
     letter-spacing: normal;
     color: #000;
     display: block;
-    padding: 14px 0px;
+    padding: 10px 0px;
 }
 .sub-menu ul li a:hover{
     transition: .3s ease;
@@ -237,10 +234,6 @@ ul.dashed>li:before {
 .small-menu{
     display: none;
 }
-
-
-
-
 #login_register .wrapper .form .InputGroup{
     flex-wrap: wrap;
     justify-content: center;

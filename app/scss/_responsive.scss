@@ -189,6 +189,32 @@
             }
         }
     }
+    .header .center-header-mobile{
+        padding: 15px 0 5px 0;
+        .wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            .left-side-nav{
+                padding-top: 5px;
+            }
+            .logo{
+                img{
+                    width: fit-content !important;
+                }
+            }
+            .small-menu{
+                .sub-menu{
+                    .buttons{
+                        display: block !important;
+                        button{
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
