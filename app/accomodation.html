@@ -9,7 +9,8 @@
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link href="css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -193,8 +194,6 @@
                             <p>reset</p>
                         </div>
                         <div class="filter_body">
-
-                            <div class="border"></div>
                             <div class="filter_item">
                                 <div class="item_header ">
                                     <h6>By room</h6>
@@ -202,30 +201,18 @@
                                     <div class="plus"><i class="fas fa-minus"></i></div>
                                 </div>
                                 <div class="item_body by_language">
-                                    <div class="checkbox_header">
-                                        <p>All rooms</p>
-                                    </div>
                                     <div class="checkbox_body">
-                                        <label class="checkbox_container">
-                                            1 room
-                                            <input autocomplete="off" type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="checkbox_container">
-                                            2 room
-                                            <input autocomplete="off" type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="checkbox_container">
-                                            3 room
-                                            <input autocomplete="off" type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="checkbox_container">
-                                            4 room
-                                            <input autocomplete="off" type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                        </label>
+                                        <div class="form-group mb-0 inputs">
+                                            <select class="select2MultipleDropDownRoom js-states form-control" multiple="multiple" style="width: 100%;">
+                                                <option value="">1 room</option>
+                                                <option value="">2 rooms</option>
+                                                <option value="">3 rooms</option>
+                                                <option value="">4 rooms</option>
+                                                <option value="">5 rooms</option>
+                                            </select>
+                                            <!-- <span asp-validation-for="Phone" class="text-danger"></span> -->
+                                            <span asp-validation-for="LanguageIds" class="text-danger"></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -467,6 +454,8 @@
     <script src="js/selectbox.js"></script>
     <script src="js/jquery-slider.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2.init.js"></script>
 </body>
 
 </html>

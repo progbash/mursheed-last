@@ -4,7 +4,13 @@ $(document).ready(function () {
     $('.select2MultipleDropDownLang').select2({
         placeholder: {
             id: '-1', // the value of the option
-            text: 'Select an option'
+            text: 'Language'
+        }
+    });
+    $('.select2MultipleDropDownRoom').select2({
+        placeholder: {
+            id: '-1', // the value of the option
+            text: 'Room'
         }
     });
 });
