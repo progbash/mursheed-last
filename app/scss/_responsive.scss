@@ -129,6 +129,66 @@
         width: 100% !important;
         margin: auto;
     }
+    .inside-inner{
+        display: none !important;
+    }
+    .inside-inner-mobile{
+        display: block;
+        .currency-country{
+            margin-left: 15px;
+            margin-right: 15px;
+            display: flex;
+            flex-direction: row;
+            .custom-selectbox{
+                .select-selected{
+                    border: none;
+                    color: black;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 0;
+                      &::after{
+                        content: "";
+                        background: none;
+                        border: none;
+                    }
+                }
+                .select-items{
+                    width: 80px;
+                    overflow: hidden;
+                    div{
+                        font-size: 14px;
+                    }
+                }
+            }
+            .country, .currency{
+                border: 1px solid #0b8071;
+                padding: 5px;
+                border-radius: 3px;
+            }
+            span{
+                font-family: Averta;
+                font-size: 12px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: right;
+                color: $main-color;
+            }
+            p{
+                font-family: Averta;
+                font-size: 16px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: normal;
+                letter-spacing: normal;
+                text-align: right;
+                color: black;
+            }
+        }
+    }
 }
 
 
