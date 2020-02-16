@@ -189,7 +189,11 @@
             }
         }
     }
+    .header .center-header{
+        display: none;
+    }
     .header .center-header-mobile{
+        display: block;
         padding: 15px 0 5px 0;
         .wrapper{
             display: flex;
