@@ -267,11 +267,11 @@
         }
     }
     .select2-container--default{
-        width: 92% !important;
+        width: 100% !important;
         height: 40px !important;
         margin: 10px auto !important;
+        margin-bottom: 10px;
         outline: none;
-        margin: 0 !important;
     }
     .select2-selection__rendered li {
         height: 35px !important;

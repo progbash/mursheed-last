@@ -250,7 +250,7 @@
 .select-selected:after {
     position: absolute;
     content: "";
-    top: 24px;
+    top: 14px;
     right: 10px;
     width: 0;
     height: 0;
@@ -260,7 +260,7 @@
 
 .select-selected.select-arrow-active:after {
     border-color: transparent transparent #dfdfdf transparent;
-    top: 16px;
+    top: 8px;
 }
 
 .select-items div,
@@ -303,4 +303,14 @@
 .select-items div:hover,
 .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px){
+    .select-selected:after {
+        top: 24px;
+    }
+    
+    .select-selected.select-arrow-active:after {
+        top: 16px;
+    }
 }
