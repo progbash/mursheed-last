@@ -8,10 +8,10 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="css/tail.datetime.css"> -->
     <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./libs/tail.DateTime-master/css/tail.datetime-harx-light.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="./libs/swiper/package/css/swiper.min.css">
+    <link rel="stylesheet" href="plugin/datatable/datatables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -199,79 +199,55 @@
                                     <img src="img/guides_drivers/star.svg" alt="">
                                     <span>(23)</span>
                                 </div>
-                                <button class="light-btn">Details</button>
                                 <button class="dark-btn">Hire</button>
                             </div>
                         </div>
                     </div>
-                    <!--/////////////////////////////////-->
+
                     <div class="swiper_driver_details_cars">
                         <div class="driver_details_cars_inside">
                             <!-- Swiper Driver Details Cars -->
                             <div class="swiper-container">
-                                    <div class="driver_details_cars_header">
-                                            <h6>Cars</h6>
-                                            <div class="driver_details_cars_inside_next_prev">
-                                                <div class="swiper-button-next">
-                                                </div>
-                                                <div class="swiper-button-prev">
-                                                </div>
-                                            </div>
+                                <div class="driver_details_cars_header">
+                                    <h6>Car photos</h6>
+
+                                    <div class="driver_details_cars_inside_next_prev">
+                                        <div class="swiper-button-next">
                                         </div>
+                                        <div class="swiper-button-prev">
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="modal_click" data-toggle="modal" data-target="#carsModalCenter">
                                             <div class="driver_details_cars_item">
-                                                <img src="./img/driver_details/bitmap1.png" alt="">
-                                                <p class="driver_details_cars_marka">Toyota</p>
-                                                <p class="driver_details_cars_model">Camry</p>
-                                                <div class="driver_details_cars_item_rides">
-                                                    <button class="btn available">unavailable</button>
-                                                </div>
+                                                <img src="./img/cars_modal/bmw1.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="modal_click" data-toggle="modal" data-target="#carsModalCenter">
                                             <div class="driver_details_cars_item">
-                                                <img src="./img/driver_details/bitmap2.png" alt="">
-                                                <p class="driver_details_cars_marka">Toyota</p>
-                                                <p class="driver_details_cars_model">Rav-4</p>
-                                                <div class="driver_details_cars_item_rides">
-                                                    <button class="btn available">unavailable</button>
-                                                </div>
+                                                <img src="./img/cars_modal/bmw2.jpg" alt="">
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="modal_click" data-toggle="modal" data-target="#carsModalCenter">
-
                                             <div class="driver_details_cars_item">
-                                                <img src="./img/driver_details/bitmap3.png" alt="">
-                                                <p class="driver_details_cars_marka">Hyundai</p>
-                                                <p class="driver_details_cars_model">Elantra</p>
-
-                                                <div class="driver_details_cars_item_rides">
-                                                    <button class="btn available">unavailable</button>
-                                                </div>
+                                                <img src="./img/cars_modal/bmw3.jpg" alt="">
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="modal_click" data-toggle="modal" data-target="#carsModalCenter">
-
                                             <div class="driver_details_cars_item">
-                                                <img src="./img/driver_details/bitmap4.png" alt="">
-                                                <p class="driver_details_cars_marka">Honda</p>
-                                                <p class="driver_details_cars_model">Pilot</p>
-                                                <div class="driver_details_cars_item_rides">
-                                                    <button class="btn busy">unavailable</button>
-                                                </div>
+                                                <img src="./img/cars_modal/2000-2003_BMW_525i_(E39)_Executive_sedan_(2010-10-02)_02.jpg"
+                                                    alt="">
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -281,37 +257,29 @@
                                 <div class="modal-dialog modal-lg">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <div class="modal-title">
-                                                <h6 id="exampleModalLongTitle">Toyota Rav-4</h6>
-                                            </div>
-
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body">
-                                            <!--   https://codepen.io/NeroSonic/pen/BOjpbz  -->
                                             <div id="carouselExampleIndicators" class="carousel slide"
                                                 data-ride="carousel">
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
-                                                        <img class="d-block w-100" src="./img/cars_modal/bitmap1.png"
+                                                        <img class="d-block w-100" src="./img/cars_modal/bmw1.jpg"
                                                             alt="First slide">
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="d-block w-100" src="./img/cars_modal/bitmap2.png"
+                                                        <img class="d-block w-100" src="./img/cars_modal/bmw2.jpg"
                                                             alt="Second slide">
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="d-block w-100" src="./img/cars_modal/bitmap3.png"
+                                                        <img class="d-block w-100" src="./img/cars_modal/bmw3.jpg"
                                                             alt="Third slide">
                                                     </div>
                                                     <div class="carousel-item">
-                                                        <img class="d-block w-100" src="./img/cars_modal/bitmap4.png"
-                                                            alt="Third slide">
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <img class="d-block w-100" src="./img/cars_modal/bitmap5.png"
+                                                        <img class="d-block w-100"
+                                                            src="./img/cars_modal/2000-2003_BMW_525i_(E39)_Executive_sedan_(2010-10-02)_02.jpg"
                                                             alt="Third slide">
                                                     </div>
                                                 </div>
@@ -326,57 +294,33 @@
                                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                                     <span class="sr-only">Next</span>
                                                 </a>
-
-                                                <div class="container carousel-indicators-footer">
-                                                    <div class="row carousel-indicators">
-                                                        <div class="item">
-                                                            <img src="./img/cars_modal/bitmap1.png" class="img-fluid"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="0" />
-                                                        </div>
-                                                        <div class="item">
-                                                            <img src="./img/cars_modal/bitmap2.png" class="img-fluid"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="1" />
-                                                        </div>
-                                                        <div class="item">
-                                                            <img src="./img/cars_modal/bitmap3.png" class="img-fluid"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="2" />
-                                                        </div>
-                                                        <div class="item">
-                                                            <img src="./img/cars_modal/bitmap4.png" class="img-fluid"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="2" />
-                                                        </div>
-                                                        <div class="item">
-                                                            <img src="./img/cars_modal/bitmap5.png" class="img-fluid"
-                                                                data-target="#carouselExampleIndicators"
-                                                                data-slide-to="2" />
-                                                        </div>
-                                                  
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <div class="modal-footer_details">
-                                                <div class="modal-footer_details_top">
-                                                    <p>Cars details</p>
-                                                </div>
-                                                <ul>
-                                                    <li>Type: SUV</li>
-                                                    <li>Brand: Toyota</li>
-                                                    <li>Model: Rav-4 </li>
-                                                    <li>Model year: 2018</li>
-                                                    <li>Seats: 1-6</li>
-                                                </ul>
-                                                <button class="btn available">available</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inputs">
+                        <label for="tourist_name">Routes</label>
+                        <div class="journey">
+                            <div class="details table-responsive">
+                                <table id="routeDetail" class="table table-striped table-bordered  nowrap"
+                                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <thead>
+                                        <tr class="text-center">
+                                            <th>id</th>
+                                            <th>from</th>
+                                            <th>to</th>
+                                            <th>price</th>
+                                            <th>info</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -442,13 +386,21 @@
                         <div class="follow-us d-flex align-items-center">
                             <p class="header-text">Follow us:</p>
                             <div class="social-icons d-flex align-items-center">
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-facebook-f"></i></a></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-instagram"></i></a></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-twitter"></i></a></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-linkedin-in"></i></li></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-whatsapp"></i></a></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-snapchat-ghost"></i></a></li>
-                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-youtube"></i></a></li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px"
+                                            class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px"
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-linkedin-in"></i>
+                                </li>
+                                </li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px"
+                                            class="fab fa-whatsapp"></i></a></li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px"
+                                            class="fab fa-snapchat-ghost"></i></a></li>
+                                <li><a href=""><i style="color:#C7C7C7; font-size: 21px" class="fab fa-youtube"></i></a>
+                                </li>
                             </div>
                         </div>
                     </div>
@@ -463,8 +415,11 @@
     <script src="js/swiper_driver_details.js"></script>
     <script src="js/swiper_packages.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/add-route.js"></script>
+
+    <script src="plugin/datatable/datatables.min.js"></script>
+    <script src="js/driver/driverDetailDataTable.init.js"></script>
 </body>
 
 </html>

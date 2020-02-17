@@ -106,7 +106,7 @@
 
     .driver_details_content {
         background: #f7f7f7;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         padding: 20px;
 
@@ -201,7 +201,7 @@
                 
                 .driver_details_cars_inside {
                     margin-bottom: 30px;
-                    width: 70%;
+                    width: 100%;
                     height: 190px;
                     .swiper-container{
                         .driver_details_cars_header {
@@ -246,13 +246,15 @@
                             .modal_click{
                                 cursor: pointer;
                                 .driver_details_cars_item{
-                                    padding: 13px 17px;
-                                    background: white;
-                                    height: 100%;
+                                    height: 100px;
+                                    width: 100%;
+                                    background-size: cover;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    overflow: hidden;
                                     img{
                                         width: 100%;
-                                        height: 53px;
-                                        margin-bottom: 20px;
                                     }
                                     .driver_details_cars_marka{
                                         margin-bottom: 0px;
@@ -325,14 +327,14 @@
                         }
                         .modal-body {
                             #carouselExampleIndicators{
-                                width: 50%;
+                                width: 95%;
                                 margin: 0 auto;
                                 .carousel-inner{
                                     .carousel-item{
-                                        height: 200px;
+                                        height: 60vh;
                                         img{
                                             width: 100%;
-                                            height: 100%;
+                                            height: auto;
                                         }
                                     }
                                 }
@@ -686,7 +688,31 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .driver_details_cars_item{
+        height: 120px !important;
+    }
+    .close{
+        font-size: 2em !important;
+    }
+    .person_details{
+        flex-direction: column;
+        .buttons button{
+            margin: 5px;
+        }
+    }
     .driver_details_content {
+        .carousel-item{
+            height: 40vh !important;
+            img{
+                height: auto !important;
+            }
+        }
+        #carouselExampleIndicators{
+            width: 100% !important;
+        .inputs{
+            padding-top: 50px !important;
+        }
+        width: 100% !important;
         .about_driver_info {
             .about_driver_info_left {
                 .about_driver_info_img {
@@ -723,7 +749,6 @@
         }
 
         .swiper_driver_details_cars {
-            
 
             .driver_details_cars_inside {
                 width: 100% !important;
@@ -731,8 +756,9 @@
                     width: 100% !important;
                 }
                 .driver_details_cars_item {
+                    height: auto !important;
                     img {
-                        height: 60px !important;
+                        height: 100% !important;
                     }
 
                     .driver_details_cars_item_rides {
@@ -826,3 +852,4 @@
     }
 }
 
+}
