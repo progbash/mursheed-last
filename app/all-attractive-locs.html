@@ -9,16 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
         integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
-    <style>
-        .profile_img {
-            width: 15%;
-        }
-
-        .profile {
-            display: flex;
-            justify-content: flex-start !important;
-        }
-    </style>
+    <link href="css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -169,122 +160,168 @@
     <section id="breadcumbs">
         <div class="container">
             <ul>
-                <li><a href="@Url.Action(" Index","Home")">Home</a></li>
-                <li><a href="@Url.Action(" Index","FlightReservation")">Flight Reservation</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="offers.html">All Attractive Locations</a></li>
             </ul>
         </div>
     </section>
-    <section id="guides_drivers">
-        <div class="container">
-            <div class="row">
-                <!--#region Guides & Drivers paging-->
-                <div class="col-md-12">
-                    <div class="content">
-                        <div class="header">
-                            <h4>Flight Reservation<span>(12)</span></h4>
-                            <div class="custom-selectbox">
-                                <select>
-                                    <option value="0">All cities</option>
-                                    <option value="1">Baku</option>
-                                    <option value="2">Qazax</option>
-                                    <option value="3">Ganja</option>
-                                    <option value="4">Shaki</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="body">
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <div><img src="http://almursheed.com/Custom/img/azal.png" /></div>
-                                            <div><h4>Azerbaijan Airlines</h4></div>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <img src="http://almursheed.com/Custom/img/azal.png" />
-                                            <h4>Azerbaijan Airlines</h4>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <img src="http://almursheed.com/Custom/img/azal.png" />
-                                            <h4>Azerbaijan Airlines</h4>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <img src="http://almursheed.com/Custom/img/azal.png" />
-                                            <h4>Azerbaijan Airlines</h4>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <img src="http://almursheed.com/Custom/img/azal.png" />
-                                            <h4>Azerbaijan Airlines</h4>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flight_details">
-                                        <div class="aviacompany_details">
-                                            <img src="http://almursheed.com/Custom/img/azal.png" />
-                                            <h4>Azerbaijan Airlines</h4>
-                                        </div>
-                                        <div class="buttons">
-                                            <a href="https://azal.az"><button class="dark-btn">Buy ticket</button></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pagination">
-                        <div>
-                            <ul>
-                                <li>
-                                    <img src="img/pagination/left-arrow.svg" alt="">
-                                </li>
-                                <li class="active">1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
-                                <li>6</li>
-                                <li>-</li>
-                                <li>8</li>
-                                <li>
-                                    <img src="img/pagination/right-arrow.svg" alt="">
-                                </li>
-                            </ul>
+
+    <section id="offers">
+        <div class="custom-offers-container">
+            <div class="row mb-4">
+                <div class="col-md-4 mb-2">
+                    <div class="item_body">
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">Country</label>
+                            <select class="select2DropDown form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
-                <!--#endregion Guides & Drivers paging-->
+                <div class="col-md-4 mb-2">
+                    <div class="item_body">
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">City</label>
+                            <select class="select2DropDown form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-2">
+                    <div class="item_body">
+                        <div class="form-group mb-0 inputs">
+                            <label asp-for="CountryId" class="col-form-label">Place</label>
+                            <select class="select2DropDown form-control" name="state" asp-for="CountryId"
+                                asp-items="ViewBag.Countries">
+                                <option>Azerbaijan</option>
+                                <option>Turkey</option>
+                                <option>Norway</option>
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div clas="col-lg-3 col-md-6 col-sm-12">
+                    <div class="location-card-container">
+                        <a href="attractive_single.html">
+                            <div class="location-card pb-4 mb-4">
+                                <img src="./img/swiper_popular_attractions_locations/rectangle1.jpg" alt="" class="location-img">
+                                <p class="location-card-name">Gabaland Park</p>
+                                <p>Azerbaijan, Mingachevir</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="pagination">
+                <div>
+                    <ul>
+                        <li>
+                            <img src="img/pagination/left-arrow.svg" alt="">
+                        </li>
+                        <li class="active">1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>-</li>
+                        <li>8</li>
+                        <li>
+                            <img src="img/pagination/right-arrow.svg" alt="">
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -360,9 +397,17 @@
             </div>
         </div>
     </footer>
-    <script src="js/selectbox.js"></script>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.select2DropDown').select2();
+        });
+    </script>
     <script src="js/navbar.js"></script>
+    <script src="js/selectbox.js"></script>
 </body>
 
 </html>
