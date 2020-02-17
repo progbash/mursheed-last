@@ -120,11 +120,6 @@
                     .about_driver_info_left {
                         display: flex;
                         flex-wrap: wrap;
-
-                        .about_driver_info_img {
-                            img {}
-                        }
-
                         .about_driver_info_content {
                             .about_driver_info_name {
                                 margin-bottom: 0px;
@@ -473,9 +468,6 @@
                                 display: flex;
                                 justify-content: space-between;
                                 margin-bottom: 10px;
-        
-                                h6 {}
-        
                                 .packages_next_prev {
                                     width: 85px;
                                     position: relative;
@@ -589,8 +581,6 @@
 
                         .feedbacks_inside_item_left {
                             margin-right: 12px;
-
-                            img {}
                         }
 
                         .feedbacks_inside_item_right {
