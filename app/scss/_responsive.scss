@@ -240,6 +240,14 @@
             }
         }
     }
+    .follow-us{
+        flex-direction: column;
+        align-items: center !important;
+        justify-content: center;
+        .social-icons{
+            padding-top: 15px;
+        }
+    }
 }
 
 
