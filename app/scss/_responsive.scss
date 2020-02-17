@@ -248,6 +248,37 @@
             padding-top: 15px;
         }
     }
+    .swiper-slide{
+        a{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+    .swiper_popular_attractions_locations_bottom_center, .swiper_most_popular_drivers_bottom_center{
+        .swiper-slide{
+            a{
+                display: flex;
+                justify-content: center;
+                width: 95%;
+                margin: auto;
+            }
+        }
+    }
+    .select2-container--default{
+        width: 92% !important;
+        height: 40px !important;
+        margin: 10px auto !important;
+        outline: none;
+        margin: 0 !important;
+    }
+    .select2-selection__rendered li {
+        height: 35px !important;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .select2-selection__choice__remove{
+        font-size: 1.4em;
+    }
 }
-
-
