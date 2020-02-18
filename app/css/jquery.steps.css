@@ -85,6 +85,7 @@
 
 .wizard > .steps .number {
     font-size: 1.429em;
+    border: none !important;
 }
 
 .wizard > .steps > ul > li {

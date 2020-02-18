@@ -11,8 +11,6 @@
     background-color: #0b8071;
     color: #ffffff;
     padding: 0 20px 0 0;
-    -webkit-box-shadow: 0px 0px 0px 2.25px #0b8071;
-    box-shadow: 0px 0px 0px 2.25px #0b8071;
 }
 
 .wizard > .steps a,
@@ -20,14 +18,14 @@
 .wizard > .steps a:hover {
     margin: 3px;
     padding: 0;
-    -ms-border-radius: 50px;
-    border-radius: 50px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
 }
 
 .wizard > .steps .number {
     font-size: 16px;
     padding: 5px;
-    border-radius: 50%;
+    border-radius: 0px;
     border: 2px solid #ffffff;
     width: 38px;
     display: inline-block;
