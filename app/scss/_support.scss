@@ -13,25 +13,39 @@
         color: #1A7F70;
         font-size: .8em;
     }
+    .filter{
+        .filter_header{
+            padding: 15px 0;
+        }
+        .filter_body{
+            .border{
+                width: 100%;
+            }
+            .filter_item{
+                .item_header{
+                    padding-left: 0;
+                }
+                .item_body{
+                    padding-left: 0;
+                }
+            }
+        }
+    }
 }
 .support-badges{
     background-color: #F7F7F7;
-    min-height: 400px;
-
     .support-badge-container{
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-
         .custom-badge{
-            width: 300px;
-            height: 250px;
-            margin: 75px 10px;
+            cursor: pointer;
+            margin: 0px 0px;
+            padding: 20px 0px;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
+            flex-direction: row;
             color: white;
             border-radius: 5px;
             
@@ -48,9 +62,6 @@
         }
         .second-badge{
             background-color: #593194;
-        }
-        .third-badge{
-            background-color: #2CBD85;
         }
     }
 }
