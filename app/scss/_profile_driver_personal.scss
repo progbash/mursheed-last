@@ -176,9 +176,10 @@
     .profile{
         padding: 24px 32px;
         .profile_img{
-            height: 65px !important;            
+            display: none;
+            // height: 65px !important;            
             img{
-                border-radius: 50%;   
+                // border-radius: 50%;   
             }
         }
     }

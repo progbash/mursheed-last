@@ -181,7 +181,6 @@ ul.dashed>li:before {
     text-decoration: none;
 }
 
-
 //custom small navigation bar for mobile devices
 .small-menu nav{
     margin: auto;
@@ -274,4 +273,13 @@ ul.dashed>li:before {
         -webkit-appearance: none !important;
         color: gray;
     }
+}
+
+.details{
+    border: none !important;
+    background-color: #f7f7f7 !important;
+}
+.input-group input:not(.sivama){
+    border-right: none !important;
+    border-radius: 4px 0px 0px 4px !important;
 }

@@ -18,7 +18,7 @@
         display: flex;
         justify-content: center;
         .select2-selection--single{
-          padding: 5px 5px;
+          padding: 8px 10px;
           height: 40px !important;
           text-align: left;
           margin: 0px 5px;
@@ -71,8 +71,8 @@
             box-shadow:none;
           }
           
-          ::-webkit-datetime-edit {}
-          ::-webkit-datetime-edit-fields-wrapper {}
+          ::-webkit-datetime-edit,
+          ::-webkit-datetime-edit-fields-wrapper,
           ::-webkit-datetime-edit-month-field:hover,
           ::-webkit-datetime-edit-day-field:hover,
           ::-webkit-datetime-edit-year-field:hover {

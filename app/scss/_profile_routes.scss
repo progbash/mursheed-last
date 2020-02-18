@@ -117,3 +117,10 @@
        
     }
 }
+
+@media screen and (max-width: 767px){
+    .new_route{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -294,4 +294,13 @@
             margin-bottom: 15px !important;
         }
     }
+    .new_route{
+        padding: 0 !important;
+        .inputs{
+            padding-bottom: 0;
+            &:nth-child(4){
+                padding-top: 30px !important;
+            }
+        }
+    }
 }

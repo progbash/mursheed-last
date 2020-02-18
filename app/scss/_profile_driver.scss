@@ -82,10 +82,9 @@
     .add-route-btn,
     .delete-route-btn,
     .add-date-btn {
-        width: 30px;
-        height: 30px;
+        height: 30px !important;
+        width: 30px !important;
         border-radius: 50%;
-        border: none;
         color: white;
         cursor: pointer;
         margin: 5px;

@@ -95,12 +95,12 @@
               .car-img-container{
                   display: flex;
                   align-items: center;
-                  justify-content: center;
+                  justify-content: space-between;
                   flex-wrap: wrap;
 
                 .single-image-container{
                     width: 25%;
-                    margin: 20px;
+                    margin: 20px 1px;
                     position: relative;
                     cursor: pointer;
 
