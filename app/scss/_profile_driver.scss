@@ -1,40 +1,44 @@
-#profile_driver{
-    .edit-route-overlay{
+#profile_driver {
+    .edit-route-overlay {
         position: fixed;
         z-index: 100;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: rgba(0,0,0,.7);
+        background-color: rgba(0, 0, 0, .7);
         display: flex;
         justify-content: center;
         align-items: center;
         display: none;
-        .edit-route-modal{
-            height:80vh;
-            width:40vw;
+
+        .edit-route-modal {
+            height: 80vh;
+            width: 40vw;
             position: absolute;
             background-color: white;
             border-radius: 14px;
             box-shadow: 0px 2px 2px gray;
-            box-shadow: 0px 0px 31px -1px rgba(0,0,0,1);
-        
-            .custom-container{
+            box-shadow: 0px 0px 31px -1px rgba(0, 0, 0, 1);
+
+            .custom-container {
                 display: flex;
                 flex-direction: column;
                 flex-wrap: wrap;
                 width: 95%;
                 margin: auto;
-                i{
+
+                i {
                     font-size: 2em;
                     margin-top: 5px;
                     cursor: pointer;
                 }
-                .edit-route-modal-inputs{
+
+                .edit-route-modal-inputs {
                     width: 90%;
                     margin: auto;
-                    label{
+
+                    label {
                         font-size: 18px;
                         font-weight: 600;
                         font-stretch: normal;
@@ -43,7 +47,8 @@
                         letter-spacing: normal;
                         color: #000;
                     }
-                    input{
+
+                    input {
                         outline: none;
                         border-radius: 5px;
                         width: 100%;
@@ -53,7 +58,8 @@
                         padding-left: 15px;
                         background-color: #F7F7F7;
                     }
-                    textarea{
+
+                    textarea {
                         outline: none;
                         border-radius: 5px;
                         width: 100%;
@@ -65,13 +71,17 @@
                     }
                 }
             }
-            
+
         }
     }
-    .package-control-container{
+
+    .package-control-container {
         display: flex;
     }
-    .add-route-btn, .delete-route-btn, .add-date-btn{
+
+    .add-route-btn,
+    .delete-route-btn,
+    .add-date-btn {
         width: 30px;
         height: 30px;
         border-radius: 50%;
@@ -80,24 +90,31 @@
         cursor: pointer;
         margin: 5px;
     }
-    .add-route-btn, .add-date-btn{
+
+    .add-route-btn,
+    .add-date-btn {
         background-color: limegreen;
     }
-    .delete-route-btn{
+
+    .delete-route-btn {
         background-color: orangered;
     }
+
     margin-top: 24px;
-    .tab_headers{
-        ul{
+
+    .tab_headers {
+        ul {
             margin-left: 0;
             padding-left: 0;
             list-style: none;
             border-radius: 4px;
             background-color: #F7F7F7;
-            li{
+
+            li {
                 border-bottom: solid 1px #dfdfdf;
                 position: relative;
-                a{
+
+                a {
                     cursor: pointer;
                     padding: 16px 22px;
                     font-family: Averta;
@@ -111,12 +128,15 @@
                     display: block;
                     text-decoration: none;
                 }
-                &:nth-last-child(1){
+
+                &:nth-last-child(1) {
                     border: none;
                 }
-                &:hover{
+
+                &:hover {
                     color: #098071;
-                    &::after{
+
+                    &::after {
                         content: "";
                         position: absolute;
                         right: 0;
@@ -127,11 +147,13 @@
                     }
                 }
             }
-            .active{
-                a{
+
+            .active {
+                a {
                     color: #098071;
                 }
-                &::after{
+
+                &::after {
                     content: "";
                     position: absolute;
                     right: 0;
@@ -143,17 +165,21 @@
             }
         }
     }
-    .dates{
+
+    .dates {
         display: flex;
         justify-content: space-between;
-        .inputs{
+
+        .inputs {
             width: 47%;
 
         }
     }
-    .visited_places{
+
+    .visited_places {
         display: flex;
-        .places{
+
+        .places {
             font-family: Averta;
             font-size: 16px;
             font-weight: normal;
@@ -168,5 +194,5 @@
             border: solid 1px #dfdfdf;
         }
     }
-  
+
 }
