@@ -1,8 +1,9 @@
 .contact-section{
-    background-color: #1A7F70;
+    background-color: #f7f7f7;
     min-height: 400px;
     color: white;
     padding: 50px 0px;
+    color: #0B8071;
 
     .social-hub-container{
         display: flex;
@@ -27,25 +28,27 @@
             margin: 9px 0px;
         }
         input{
-            background-color: #f7f7f7;
+            background-color: #fff;
             width: 100%;
             border: none;
             outline: none;
             border-radius: 5px;
             height: 40px;
             padding-left: 10px;
+            border: 1px solid #0B8071;
         }
         textarea{
-            background-color: #f7f7f7;
+            background-color: #fff;
             width: 100%;
             border: none;
             outline: none;
             border-radius: 5px;
             padding-left: 10px;
+            border: 1px solid #0B8071;
         }
         .submit-btn{
             background: 0 0;
-            border: 1px solid white;
+            border: 1px solid #0B8071;
             min-width: 120px;
             padding: 5px 0;
             border-radius: 3px;
@@ -57,7 +60,7 @@
             line-height: normal;
             letter-spacing: normal;
             text-align: center;
-            color: white;
+            color: #0B8071;
         }
     }
 }
