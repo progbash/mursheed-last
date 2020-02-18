@@ -263,3 +263,15 @@ ul.dashed>li:before {
 .login-reg-btns{
     display: none;
 }
+.error-span{
+    display: none;
+}
+
+
+.start_your_journey_bottom{
+    select {
+        -moz-appearance: none !important;
+        -webkit-appearance: none !important;
+        color: gray;
+    }
+}
