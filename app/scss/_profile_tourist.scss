@@ -23,6 +23,9 @@ tr.odd{
     background-color: transparent;
     border: none;
 }
+.inputs input{
+    background-color: transparent !important;
+}
 a.paginate_button.current, a.paginate_button{
     color: black;
     padding: 0px 3px !important;
