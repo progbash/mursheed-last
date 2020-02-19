@@ -281,3 +281,17 @@ ul.dashed>li:before {
     border-right: none !important;
     border-radius: 4px 0px 0px 4px !important;
 }
+
+ul.pagination i, ul.pagination a{
+    color: gray !important;
+}
+ul.pagination .active a{
+    color: black !important;
+    border: 1px solid #F7F7F7 !important;
+}
+ul.pagination li a{
+    background-color: #F7F7F7 !important;
+}
+.page-link{
+    padding: 5px 10px;
+}
