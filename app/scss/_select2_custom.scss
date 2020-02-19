@@ -32,15 +32,24 @@ select.form-control {
 
 //driver_register.html
 .select2-selection--single{
-    height: 46px !important; 
+    height: 43px !important; 
     padding: 8px 10px;
+    outline: none;
+}
+.select2-search{
+    outline: none;
+}
+.select2-search__field{
+    outline: none;
+}
+.select2-search--dropdown{
+    padding: 0 !important;
 }
 .select2-selection__rendered{
     color: #000;
 }
 .select2-selection__arrow{
     margin-top: 10px;
-    
 }
 .select2-selection__clear{
     display: none;
