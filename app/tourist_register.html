@@ -181,7 +181,7 @@
                                 id="form-horizontal" enctype="multipart/form-data"
                                 class="driverRegister form-horizontal form-wizard-wrapper wizard" autocomplete="off">
                                 <h3>Info</h3>
-                                <fieldset>
+                                <fieldset style="width: 100%;">
                                     <div>
                                         <div class="form-group inputs">
                                             <label asp-for="Firstname" class="col-form-label">Name</label>
@@ -228,8 +228,8 @@
                                 <!--end fieldset-->
 
                                 <h3>Login</h3>
-                                <fieldset>
-                                    <div class="custom-container">
+                                <fieldset style="width: 100%;">
+                                    <div>
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group inputs">
@@ -240,7 +240,7 @@
                                                                     class="far fa-envelope"></i></span>
                                                         </div>
                                                         <input autocomplete="off" type="email" asp-for="Email"
-                                                            class="form-control formField" placeholder="Your Email"
+                                                            class="sivama form-control formField" placeholder="Your Email"
                                                             autocomplete="off" style="width: 80% !important;">
                                                     </div>
                                                     <span asp-validation-for="Email" class="text-danger"></span>
@@ -248,13 +248,13 @@
                                                 <!--end form-group-->
                                                 <div class="form-group inputs">
                                                     <label asp-for="Username">Username</label>
-                                                    <div class="input-group">
+                                                    <div class="sivama input-group">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text"><i
                                                                     class="far fa-user"></i></span>
                                                         </div>
                                                         <input autocomplete="off" style="width: 80% !important;" type="text"
-                                                            asp-for="Username" class="form-control formField"
+                                                            asp-for="Username" class="sivama form-control formField"
                                                             autocomplete="off" placeholder="Your Username">
                                                     </div>
                                                     <span asp-validation-for="Username" class="text-danger"></span>
