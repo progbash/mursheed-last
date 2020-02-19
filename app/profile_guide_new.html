@@ -321,7 +321,45 @@
                             <div class="details">
                                 <form action="" id="addRouteForm">
                                     <p class="heading">Add new route</p>
-                                    <div class="new_route">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group inputs">
+                                                <label asp-for="FromRoute">From</label>
+                                                <select class="select2DropDown formField route-from" name="routeFrom">
+                                                    <option>Baku</option>
+                                                    <option>Ganja</option>
+                                                    <option>Mingachevir</option>
+                                                </select>
+                                                <span asp-validation-for="FromRoute" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group inputs">
+                                                <label asp-for="RoutePrice">Price</label>
+                                                <input autocomplete="off" asp-for="RoutePrice" class="form-control formField route-price" 
+                                                type="text" name="routePrice"
+                                                placeholder="$100" autocomplete="off">
+                                                <span asp-validation-for="RoutePrice" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group inputs">
+                                                <label asp-for="ToRoute">To</label>
+                                                <select class="select2DropDown formField route-to" name="routeTo">
+                                                    <option>Baku</option>
+                                                    <option>Ganja</option>
+                                                    <option>Mingachevir</option>
+                                                </select>
+                                                <span asp-validation-for="FromRoute" class="text-danger"></span>
+                                            </div>
+                                            <div class="new-route">
+                                                <div class="form-group inputs">
+                                                    <label asp-for="RouteInfo">Info</label>
+                                                    <textarea required name="RouteInfo" cols="30"  style="resize: vertical; min-height: 46px; height: 46px"></textarea>
+                                                    <span asp-validation-for="RouteInfo" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="new_route">
                                         <div class="form-group inputs">
                                             <label asp-for="FromRoute">From</label>
                                             <select class="select2DropDown formField route-from" name="routeFrom">
@@ -361,7 +399,7 @@
                                             <textarea required name="RouteInfo" cols="30" rows="2" style="resize: vertical;"></textarea>
                                             <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
                             <div class="details">
@@ -423,9 +461,9 @@
                             <div class="form-group inputs">
                                 <label asp-for="Email">Email</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-envelope"></i></span>
-                                    </div>
+                                    </div> -->
                                     <input autocomplete="off" type="email" asp-for="Email"
                                         class="form-control formField" placeholder="Your Email" autocomplete="off"
                                         style="width: 80% !important;">
@@ -435,9 +473,9 @@
                             <div class="form-group inputs">
                                 <label asp-for="Phone">Phone</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-phone"></i></span>
-                                    </div>
+                                    </div> -->
                                     <input autocomplete="off" type="text" asp-for="Phone" class="form-control formField"
                                         placeholder="Your Phone" autocomplete="off" style="width: 80% !important;">
                                 </div>
@@ -446,9 +484,9 @@
                             <div class="form-group inputs">
                                 <label asp-for="Username">Username</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-user"></i></span>
-                                    </div>
+                                    </div> -->
                                     <input autocomplete="off" style="width: 80% !important;" type="text"
                                         asp-for="Username" class="form-control formField" autocomplete="off"
                                         placeholder="Your Username">
@@ -458,8 +496,8 @@
                             <div class="form-group inputs">
                                 <label asp-for="Password">Password</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend"><span class="input-group-text"><i
-                                                class="far fa-user"></i></span></div>
+                                    <!-- <div class="input-group-prepend"><span class="input-group-text"><i
+                                                class="far fa-user"></i></span></div> -->
                                     <input autocomplete="off" id="password_input" style="width: 80% !important;"
                                         type="password" asp-for="Password" class="form-control formField"
                                         placeholder="Your Password">
@@ -471,9 +509,9 @@
                             <div class="form-group inputs">
                                 <label asp-for="confirmPassword">Confirm Password</label>
                                 <div class="input-group">
-                                    <div class="input-group-prepend">
+                                    <!-- <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="far fa-user"></i></span>
-                                    </div>
+                                    </div> -->
                                     <input autocomplete="off" id="confrim_password_input" style="width: 80% !important;"
                                         type="password" asp-for="confirmPassword" class="form-control formField"
                                         placeholder="Confirm Your Password">

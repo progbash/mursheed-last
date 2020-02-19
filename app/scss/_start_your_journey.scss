@@ -67,16 +67,7 @@
           }
           input[type="date"]:focus {
             outline:none;
-            // border-color: transparent;
             box-shadow:none;
-          }
-          
-          ::-webkit-datetime-edit,
-          ::-webkit-datetime-edit-fields-wrapper,
-          ::-webkit-datetime-edit-month-field:hover,
-          ::-webkit-datetime-edit-day-field:hover,
-          ::-webkit-datetime-edit-year-field:hover {
-            background:rgba(0, 120, 250, 0.1);
           }
           ::-webkit-datetime-edit-text {
             opacity:0;
