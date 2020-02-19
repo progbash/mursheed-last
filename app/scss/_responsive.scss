@@ -294,6 +294,9 @@
 }
 
 @media screen and (max-width: 767px){
+    .action-modal {
+        width: 80vw !important;
+    }
     .location-card-container{
         width: 100% !important;
     }

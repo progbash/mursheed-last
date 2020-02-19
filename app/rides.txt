@@ -15,6 +15,9 @@
             ],
             "status":[
                 "Pending"
+            ],
+            "action":[
+                "<i class='text-primary pt-1 d-block text-center fa fa-edit edit-ride' onclick='action(this)'></i>"
             ]
         }
     ]

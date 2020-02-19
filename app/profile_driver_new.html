@@ -375,6 +375,7 @@
                                                         <th>To date</th>
                                                         <th>Price</th>
                                                         <th>Status</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -385,6 +386,7 @@
                                                         <th>To date</th>
                                                         <th>Price</th>
                                                         <th>Status</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -394,6 +396,30 @@
                                         <button class="save-btn">Save changes</button>
                                     </div>
                                 </form>
+                            </div>
+                            <div class="action-overlay">
+                                <div class="action-modal">
+                                    <div class="custom-container">
+                                        <div class="action-modal-header">
+                                            <i class="fas fa-times float-right" onclick="closeEditModal()"></i>
+                                        </div>
+                                        <div class="action-modal-inputs">
+                                            <form action="">
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" name="action-radio">
+                                                    <label for="approve">Approve</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" name="action-radio">
+                                                    <label for="reject">Reject</label>
+                                                </div>
+                                            </form>
+                                            <div class="save">
+                                                <button class="save-btn">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!--#endregion rides-->
@@ -442,7 +468,7 @@
                                 <form action="" id="addRouteForm">
                                     <p class="heading">Add new route</p>
                                     <div class="row">
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="form-group inputs">
                                                 <label asp-for="FromRoute">From</label>
                                                 <select class="select2DropDown formField route-from" name="routeFrom">
@@ -460,7 +486,7 @@
                                                 <span asp-validation-for="RoutePrice" class="text-danger"></span>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="form-group inputs">
                                                 <label asp-for="ToRoute">To</label>
                                                 <select class="select2DropDown formField route-to" name="routeTo">
@@ -520,6 +546,9 @@
                                             <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
                                     </div> -->
+                                    <div class="save">
+                                        <button class="float-right save-btn">Save changes</button>
+                                    </div>
                                 </form>
                             </div>
 
@@ -819,6 +848,7 @@
     <script src="js/add-date.js"></script>
     <script src="js/script.js"></script>
     <script src="js/selectbox.js"></script>
+    <script src="js/edit-ride.js"></script>
 </script>
 </body>
 

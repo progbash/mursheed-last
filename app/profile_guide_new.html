@@ -289,6 +289,7 @@
                                                         <th>To date</th>
                                                         <th>Price</th>
                                                         <th>Status</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -299,15 +300,37 @@
                                                         <th>To date</th>
                                                         <th>Price</th>
                                                         <th>Status</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-                                    <div class="save">
-                                        <button class="save-btn">Save changes</button>
-                                    </div>
                                 </form>
+                            </div>
+                            <div class="action-overlay">
+                                <div class="action-modal">
+                                    <div class="custom-container">
+                                        <div class="action-modal-header">
+                                            <i class="fas fa-times float-right" onclick="closeEditModal()"></i>
+                                        </div>
+                                        <div class="action-modal-inputs">
+                                            <form action="">
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" name="action-radio">
+                                                    <label for="approve">Approve</label>
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <input type="radio" name="action-radio">
+                                                    <label for="reject">Reject</label>
+                                                </div>
+                                            </form>
+                                            <div class="save">
+                                                <button class="save-btn">Save changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!--#endregion rides-->
@@ -400,57 +423,60 @@
                                             <span asp-validation-for="RouteInfo" class="text-danger"></span>
                                         </div>
                                     </div> -->
+                                    <div class="save">
+                                        <button class="save-btn">Save changes</button>
+                                    </div>
                                 </form>
                             </div>
                             <div class="details">
-                            <form>
-                                <div class="inputs">
-                                    <label for="tourist_name">Routes</label>
-                                    <div class="journey">
-                                        <div class="details table-responsive">
-                                            <!-- <table id="routeTable" class="display">
+                                <form>
+                                    <div class="inputs">
+                                        <label for="tourist_name">Routes</label>
+                                        <div class="journey">
+                                            <div class="details table-responsive">
+                                                <!-- <table id="routeTable" class="display">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Start date</th>
+                                                                <th>End date</th>
+                                                                <th>Total Cost</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><input class="from-route-table" autocomplete="off"
+                                                                        type="datetime" disabled></td>
+                                                                <td><input class="to-route-table" autocomplete="off"
+                                                                        type="datetime" disabled></td>
+                                                                <td><input class="route-price-table" autocomplete="off" disabled
+                                                                        type="text"
+                                                                        style="width: 30%; outline: none; border: none;">
+                                                                </td>
+                                                                <td>
+                                                                    <button>delete</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table> -->
+                                                <table id="routeTable" class="table table-striped table-bordered  nowrap"
+                                                    style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                                     <thead>
-                                                        <tr>
-                                                            <th>Start date</th>
-                                                            <th>End date</th>
-                                                            <th>Total Cost</th>
+                                                        <tr class="text-center">
+                                                            <th>id</th>
+                                                            <th>from</th>
+                                                            <th>to</th>
+                                                            <th>price</th>
+                                                            <th>info</th>
+                                                            <th>#</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        <tr>
-                                                            <td><input class="from-route-table" autocomplete="off"
-                                                                    type="datetime" disabled></td>
-                                                            <td><input class="to-route-table" autocomplete="off"
-                                                                    type="datetime" disabled></td>
-                                                            <td><input class="route-price-table" autocomplete="off" disabled
-                                                                    type="text"
-                                                                    style="width: 30%; outline: none; border: none;">
-                                                            </td>
-                                                            <td>
-                                                                <button>delete</button>
-                                                            </td>
-                                                        </tr>
                                                     </tbody>
-                                                </table> -->
-                                            <table id="routeTable" class="table table-striped table-bordered  nowrap"
-                                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
-                                                <thead>
-                                                    <tr class="text-center">
-                                                        <th>id</th>
-                                                        <th>from</th>
-                                                        <th>to</th>
-                                                        <th>price</th>
-                                                        <th>info</th>
-                                                        <th>#</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
                             </div>
                         </div>
                     <!--#endregion-->
@@ -697,6 +723,7 @@
     <script src="js/add-date.js"></script>
     <script src="js/script.js"></script>
     <script src="js/selectbox.js"></script>
+    <script src="js/edit-ride.js"></script>
 </body>
 
 </html>

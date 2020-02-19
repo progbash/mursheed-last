@@ -26,6 +26,9 @@ var rideDataTable = $('#rideDataTable').DataTable({
         },
         {
             "data": "status"
+        },
+        {
+            "data": "action"
         }
     ],
     "order": [
