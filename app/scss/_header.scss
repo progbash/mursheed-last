@@ -20,6 +20,9 @@ header{
         }
     }
     .center-header{
+        .if-logged{
+            display: none;
+        }
         padding: 15px 0;
         background-color: #fff;
         .wrapper{
