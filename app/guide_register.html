@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+        integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.min.css">
     <link href="css/select2.min.css" rel="stylesheet" />
     <link href="css/jquery.steps.css" rel="stylesheet" />
@@ -106,7 +107,7 @@
                             <button class="light-btn">Login</button>
                             <button class="dark-btn">Register</button>
                         </div>
-                        
+
                         <div class="if-logged buttons">
                             <button class="light-btn">Profile</button>
                             <button class="dark-btn">Logout</button>
@@ -183,183 +184,173 @@
                             <h3>Guide Register</h3>
                         </div>
                         <div class="form">
-                            <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST" @returnUrl "
-                                id="form-horizontal " enctype="multipart/form-data "
-                                class="driverRegister form-horizontal form-wizard-wrapper wizard " autocomplete="off ">
-                                <div>
-                                    <h3>Info</h3>
-                                    <section>
-
-                                        <div class="form-group inputs ">
-                                            <label asp-for="Firstname " for="Firstname "
-                                                class="col-form-label ">Name</label>
-                                            <input name="Firstname " required autocomplete="off " asp-for="Firstname "
-                                                class="form-control formField required " type="text " value=" "
-                                                placeholder="Your Name " autocomplete="off ">
-                                            <span asp-validation-for="Firstname " class="text-danger "></span>
-                                        </div>
-
-                                        <div class="form-group inputs ">
-                                            <label asp-for="Lastname " for="Lastname "
-                                                class="col-form-label ">Surname</label>
-                                            <input name="Lastname " required autocomplete="off " asp-for="Lastname "
-                                                class="form-control formField required " type="text " value=" "
-                                                placeholder="Your Surname " autocomplete="off ">
-                                            <span asp-validation-for="Lastname " class="text-danger "></span>
-                                        </div>
-
-                                        <div class="form-group inputs ">
-                                            <label for="Country ">Country</label>
-                                            <select required class="select2DropDown form-control required "
-                                                name="Country " asp-for="CountryId " asp-items="ViewBag.Countries ">
-                                                <option>Azerbaijan</option>
-                                                <option>Turkey</option>
-                                                <option>Norway</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="form-group mb-0 inputs driver-photo-container ">
-                                            <label asp-for="Photo " for="Photo " class="col-form-label ">Photo</label>
-                                            <input name="Photo " required autocomplete="off " asp-for="Photo "
-                                                class="form-control formField required " type="file "
-                                                placeholder="@Html.DisplayNameFor(m=> m.Photo)">
-                                <span asp-validation-for="Photo" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group mb-0 inputs">
-                            <label asp-for="LanguageIds" for="Language">Language</label>
-                            <select required name="Language" class="form-control select2MultipleDropDown formField required" asp-for="LanguageIds" multiple="multiple" asp-items="ViewBag.Languages">
-                                                <option>Azerbaijani</option>
-                                                <option>Russian</option>
-                                                <option>English</option>
-                                                <option>Turkish</option>
-                                            </select>
-                            <span asp-validation-for="LanguageIds" class="text-danger"></span>
-                        </div>
-    </section>
-
-    <h3>Additional</h3>
-    <section>
-        <div class="form-group inputs">
-            <div class="form-group inputs">
-                <label asp-for="GovernmentalId" for="GovernmentalId" class="col-form-label">Governmental
-                                                    Id</label>
-                <input name="GovernmentalId" required autocomplete="off" asp-for="GovernmentalId" class="form-control formField required" type="text" value="" autocomplete="off" placeholder="Your Governmental Id">
-                <span asp-validation-for="GovernmentalId" class="text-danger"></span>
-            </div>
-        </div>
-
-        <div class="form-group inputs">
-            <label asp-for="PhoneNumber" for="PhoneNumber" class="col-form-label">Phone
-                                                Number</label>
-            <input name="PhoneNumber" required autocomplete="off" asp-for="PhoneNumber" class="form-control formField required" type="tel" value="" autocomplete="off" placeholder="Your Phone Number">
-            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-        </div>
-
-        <div class="form-group inputs">
-            <label asp-for="Birthdate" for="Birthdate" class="col-form-label">Birthdate
-                                            </label>
-            <input name="Birthdate" required autocomplete="off" asp-for="Birthdate" class="form-control formField required" type="date" value="" autocomplete="off">
-            <span asp-validation-for="Birthdate" class="text-danger"></span>
-        </div>
-
-    </section>
-
-    <h3>Login</h3>
-    <section>
-        <div class="form-group inputs">
-            <label asp-for="Email" for="Email">Email</label>
-            <div class="input-group">
-
-                <input name="Email" required autocomplete="off" type="email" asp-for="Email" class="form-control formField required" placeholder="Your Email" autocomplete="off" style="width: 80% !important;">
-            </div>
-            <span asp-validation-for="Email" class="text-danger"></span>
-        </div>
-        <div class="form-group inputs">
-            <label asp-for="Username" for="Username">Username</label>
-            <div class="input-group">
-
-                <input name="Username" required autocomplete="off" style="width: 80% !important;" type="text" asp-for="Username" class="form-control formField required" autocomplete="off" placeholder="Your Username">
-            </div>
-            <span asp-validation-for="Username" class="text-danger"></span>
-        </div>
-        <div class="form-group inputs">
-            <label asp-for="Password" for="Password">Password</label>
-            <div class="input-group">
-                <input name="Password" required autocomplete="off" id="password_input" style="width: 80% !important;" type="password" asp-for="Password" class="form-control formField required" placeholder="Your Password">
-                <button type="button" class="view"><img src="img/login/view-copy.svg"
-                                    <h3>Login</h3>
-                                    <section>
-                                        <div class="form-group inputs">
-                                            <label asp-for="Email" for="Email">Email</label>
-                                            <div class="input-group">
-                                                <!-- <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="far fa-envelope"></i></span>
-                                                </div> -->
-                                                <input name="Email" required autocomplete="off" type="email"
-                                                    asp-for="Email" class="sivama form-control formField required"
-                                                    placeholder="Your Email" autocomplete="off"
-                                                    style="width: 80% !important;">
+                            <div class="container">
+                                <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST"
+                                    @returnUrl" enctype="multipart/form-data"
+                                    class="driverRegister form-horizontal form-wizard-wrapper wizard"
+                                    autocomplete="off">
+                                    <div>
+                                        <h3>Info</h3>
+                                        <section>
+                                            <div class="form-group inputs">
+                                                <label asp-for="Firstname" for="Firstname"
+                                                    class="col-form-label">Name</label>
+                                                <input name="Firstname" required autocomplete="off" asp-for="Firstname"
+                                                    class="form-control formField required" type="text" value=""
+                                                    placeholder="Your Name" autocomplete="off">
+                                                <span asp-validation-for="Firstname" class="text-danger"></span>
                                             </div>
-                                            <span asp-validation-for="Email" class="text-danger"></span>
-                                        </div>
-                                        <div class="form-group inputs">
-                                            <label asp-for="Username" for="Username">Username</label>
-                                            <div class="input-group">
-                                                <!-- <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i
-                                                            class="far fa-user"></i></span>
-                                                </div> -->
-                                                <input name="Username" required autocomplete="off"
-                                                    style="width: 80% !important;" type="text" asp-for="Username"
-                                                    class="sivama form-control formField required" autocomplete="off"
-                                                    placeholder="Your Username">
+
+                                            <div class="form-group inputs">
+                                                <label asp-for="Lastname" for="Lastname"
+                                                    class="col-form-label">Surname</label>
+                                                <input name="Lastname" required autocomplete="off" asp-for="Lastname"
+                                                    class="form-control formField required" type="text" value=""
+                                                    placeholder="Your Surname" autocomplete="off">
+                                                <span asp-validation-for="Lastname" class="text-danger"></span>
                                             </div>
-                                            <span asp-validation-for="Username" class="text-danger"></span>
-                                        </div>
-                                        <div class="form-group inputs">
-                                            <label asp-for="Password" for="Password">Password</label>
-                                            <div class="input-group">
-                                                <!-- <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div> -->
-                                                <input name="Password" required autocomplete="off" id="password_input"
-                                                    style="width: 80% !important;" type="password" asp-for="Password"
-                                                    class="passwordInput form-control formField required" placeholder="Your Password">
-                                                <button type="button" class="view"><img src="img/login/view-copy.svg"
-                                                        alt=""></button>
-            </div>
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-        <div class="form-group inputs">
-            <label asp-for="confirmPassword" for="confirmPassword">Confirm
-                                                Password</label>
-            <div class="input-group">
 
-                <input name="confirmPassword" required autocomplete="off" id="confrim_password_input" style="width: 80% !important;" type="password" asp-for="confirmPassword" class="form-control formField required" placeholder="Confirm Your Password">
-                <button type="button" class="view_confrim"><img>
-                                            <div class="input-group">
-                                                <!-- <div class="input-group-prepend">
-                                                    <span class="input-group-text"><i class="far fa-user"></i></span>
-                                                </div> -->
-                                                <input name="confirmPassword" required autocomplete="off"
-                                                    id="confrim_password_input" style="width: 80% !important;"
-                                                    type="password" asp-for="confirmPassword"
-                                                    class="confirmPasswordInput form-control formField required"
-                                                    placeholder="Confirm Your Password">
-                                                <button type="button" class="view_confrim"><img
+                                            <div class="form-group inputs">
+                                                <label for="Country">Country</label>
+                                                <select required class="select2DropDown form-control required"
+                                                    name="Country" asp-for="CountryId" asp-items="ViewBag.Countries">
+                                                    <option>Azerbaijan</option>
+                                                    <option>Turkey</option>
+                                                    <option>Norway</option>
+                                                </select>
+                                            </div>
 
-                                                        src="img/login/view-copy.svg" alt=""></button>
+                                            <div class="form-group mb-0 inputs">
+                                                <label asp-for="LanguageIds" for="Language">Language</label>
+                                                <select required name="Language"
+                                                    class="form-control select2MultipleDropDown formField required"
+                                                    asp-for="LanguageIds" multiple="multiple"
+                                                    asp-items="ViewBag.Languages">
+                                                    <option>Azerbaijani</option>
+                                                    <option>Russian</option>
+                                                    <option>English</option>
+                                                    <option>Deutsch</option>
+                                                    <option>Spanish</option>
+                                                </select>
+                                                <span asp-validation-for="Language" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="form-group mb-0 inputs driver-photo-container">
+                                                <label asp-for="Photo" for="Photo" class="col-form-label">Photo</label>
+                                                <input name="Photo" required autocomplete="off" asp-for="Photo"
+                                                    class="form-control formField required" type="file"
+                                                    placeholder="@Html.DisplayNameFor(m => m.Photo)">
+                                                <span asp-validation-for="Photo" class="text-danger"></span>
+                                            </div>
+                                        </section>
+
+                                        <h3>Additional</h3>
+                                        <section>
+                                            <div class="form-group inputs">
+                                                <div class="form-group inputs">
+                                                    <label asp-for="GovernmentalId" for="GovernmentalId"
+                                                        class="col-form-label">Governmental
+                                                        Id</label>
+                                                    <input name="GovernmentalId" required autocomplete="off"
+                                                        asp-for="GovernmentalId" class="form-control formField required"
+                                                        type="text" value="" autocomplete="off"
+                                                        placeholder="Your Governmental Id">
+                                                    <span asp-validation-for="GovernmentalId"
+                                                        class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group inputs">
+                                                <label asp-for="PhoneNumber" for="PhoneNumber"
+                                                    class="col-form-label">Phone
+                                                    Number</label>
+                                                <input name="PhoneNumber" required autocomplete="off"
+                                                    asp-for="PhoneNumber" class="form-control formField required"
+                                                    type="tel" value="" autocomplete="off"
+                                                    placeholder="Your Phone Number">
+                                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="form-group inputs">
+                                                <label asp-for="Birthdate" for="Birthdate"
+                                                    class="col-form-label">Birthdate </label>
+                                                <input name="Birthdate" required autocomplete="off" asp-for="Birthdate"
+                                                    class="form-control formField required" type="date" value=""
+                                                    autocomplete="off">
+                                                <span asp-validation-for="Birthdate" class="text-danger"></span>
+                                            </div>
+                                        </section>
+
+                                        <h3>Login</h3>
+                                        <section>
+                                            <div class="form-group inputs">
+                                                <label asp-for="Email" for="Email">Email</label>
+                                                <div class="input-group">
+                                                    <!-- <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i
+                                                                class="far fa-envelope"></i></span>
+                                                    </div> -->
+                                                    <input name="Email" required autocomplete="off" type="email"
+                                                        asp-for="Email" class="sivama form-control formField required"
+                                                        placeholder="Your Email" autocomplete="off"
+                                                        style="width: 80% !important;">
+                                                </div>
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group inputs">
+                                                <label asp-for="Username" for="Username">Username</label>
+                                                <div class="input-group">
+                                                    <!-- <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i
+                                                                class="far fa-user"></i></span>
+                                                    </div> -->
+                                                    <input name="Username" required autocomplete="off"
+                                                        style="width: 80% !important;" type="text" asp-for="Username"
+                                                        class="sivama form-control formField required"
+                                                        autocomplete="off" placeholder="Your Username">
+                                                </div>
+                                                <span asp-validation-for="Username" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group inputs">
+                                                <label asp-for="Password" for="Password">Password</label>
+                                                <div class="input-group">
+                                                    <!-- <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div> -->
+                                                    <input name="Password" required autocomplete="off"
+                                                        id="password_input" style="width: 80% !important;"
+                                                        type="password" asp-for="Password"
+                                                        class="passwordInput form-control formField required"
+                                                        placeholder="Your Password">
+                                                    <button type="button" class="view"><img
+                                                            src="img/login/view-copy.svg" alt=""></button>
+                                                </div>
+                                                <span asp-validation-for="Password" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group inputs">
+                                                <label asp-for="confirmPassword" for="confirmPassword">Confirm
+                                                    Password</label>
+                                                <div class="input-group">
+                                                    <!-- <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="far fa-user"></i></span>
+                                                    </div> -->
+                                                    <input name="confirmPassword" required autocomplete="off"
+                                                        id="confrim_password_input" style="width: 80% !important;"
+                                                        type="password" asp-for="confirmPassword"
+                                                        class="confirmPasswordInput form-control formField required"
+                                                        placeholder="Confirm Your Password">
+                                                    <button type="button" class="view_confrim"><img
+                                                            src="img/login/view-copy.svg" alt=""></button>
+                                                </div>
+                                                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <span asp-validation-for="confirmPassword" class="text-danger"></span>
         </div>
-    </section>
-    </div>
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
     </section>
     <footer>
         <div class="container">
@@ -456,8 +447,8 @@
     <script src="js/select2.min.js"></script>
     <script src="js/driverRegister.js" asp-append-version="true"></script>
     <script>
-        $(document).ready(function() {
-            $('a[href="#finish"]').click(function() {
+        $(document).ready(function () {
+            $('a[href="#finish"]').click(function () {
                 $(".driverRegister").submit();
             });
         });
