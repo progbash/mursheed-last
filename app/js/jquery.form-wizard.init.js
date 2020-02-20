@@ -70,11 +70,11 @@
 
 var form = $(".form-horizontal");
 form.validate({
-    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    errorPlacement: function errorPlacement(error, element) { element.after(error); },
     rules: {
         confirm: {
             equalTo: "#password"
-        }
+        },
     }
 });
 form.children("div").steps({
