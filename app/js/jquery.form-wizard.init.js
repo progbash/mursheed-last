@@ -68,7 +68,7 @@
 // })
 
 
-var form = $("#form-horizontal");
+var form = $(".form-horizontal");
 form.validate({
     errorPlacement: function errorPlacement(error, element) { element.before(error); },
     rules: {

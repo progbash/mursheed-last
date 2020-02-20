@@ -178,7 +178,9 @@
                         </div>
                         <div class="form">
                             <div class="container">
-                                <form id="form-horizontal" action="#">
+                                <form onSubmit="return confirm('Şərtlərimizlə razısan, tülək ?');" method="POST" @returnUrl"
+                                 enctype="multipart/form-data"
+                                class="driverRegister form-horizontal form-wizard-wrapper wizard" autocomplete="off">
                                     <div>
                                         <h3>Info</h3>
                                         <section>
@@ -475,6 +477,7 @@
         </div>
     </footer>
     <!-- #endregion -->
+    
     <script src="js/selectbox.js"></script>
     <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
