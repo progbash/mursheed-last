@@ -1,82 +1,26 @@
-// $(function () {
-//     $("#form-horizontal").not($(".inputs .custom-selectbox")).steps({
-//         headerTag: "h3",
-//         bodyTag: "fieldset",
-//         transitionEffect: "slide",
-
-//         onStepChanging: function (event, currentIndex, priorIndex) {
-//             $('.form-control, .select2-container').filter('[required]').each(function () {
-//                 if ($(this).val() === '') {
-//                     $(this).css("border", "1px solid red");
-//                     return false;
-//                     // $("#form-horizontal").steps("next",{});
-//                 }
-//                 else if($(this).length > 0){   
-//                     $(this).css("border", "1px solid #dfdfdf");
-//                     return true;
-//                 }
-//             });
-//         },
-//     });
-//     $("#form-vertical").steps({
-//         headerTag: "h3",
-//         bodyTag: "fieldset",
-//         transitionEffect: "slideLeft",
-//         stepsOrientation: "vertical",
-//     });
-// });
-
-
-// $(function () {
-//     $("#form-horizontal").validate({
-//         errorPlacement: function errorPlacement(error, element) {
-//             element.before(error);
-//         },
-//         rules: {
-//             confirm: {
-//                 equalTo: "#password"
-//             }
-//         }
-//     });
-
-//     $("#form-horizontal").not($(".inputs .custom-selectbox")).steps({
-//         headerTag: "h3",
-//         bodyTag: "fieldset",
-//         transitionEffect: "slide",
-
-//         onStepChanging: function (event, currentIndex, newIndex) {
-//             $("#form-horizontal").validate().settings.ignore = ":disabled,:hidden";
-//             return $("#form-horizontal").valid();
-//         },
-
-//         onFinishing: function (event, currentIndex) {
-//             $("#form-horizontal").validate().settings.ignore = ":disabled";
-//             return $("#form-horizontal").valid();
-//         },
-
-//         onFinished: function (event, currentIndex) {
-//             alert("Submitted!");
-//         }
-//     });
-
-//     $("#form-vertical").steps({
-//         headerTag: "h3",
-//         bodyTag: "fieldset",
-//         transitionEffect: "slideLeft",
-//         stepsOrientation: "vertical",
-//     });
-// })
-
-
 var form = $(".form-horizontal");
 form.validate({
-    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+    errorPlacement: function errorPlacement(error, element) { 
+        if(element.hasClass('select2') && element.next('.select2-container').length) {
+            error.insertAfter(element.next('.select2-container'));
+        }
+        else if(element.hasClass('passwordInput')){
+            error.insertAfter(element.next('.view'));
+        }
+        else if(element.hasClass("confirmPasswordInput")){
+            error.insertAfter(element.next('.view_confrim'));
+        }
+        else{
+            element.after(error);
+        }
+    },
     rules: {
         confirm: {
             equalTo: "#password"
-        }
+        },
     }
 });
+
 form.children("div").steps({
     headerTag: "h3",
     bodyTag: "section",

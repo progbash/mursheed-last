@@ -130,6 +130,7 @@ input[type="file"] {
 //show and hide password buttons
 button.view,
 button.view_confrim {
+    outline: none;
     background-color: #F7F7F7;
     border: 1px solid #DFDFDF;
     border-left: none;

@@ -139,6 +139,8 @@
                     height: 46px;
                     position: relative;
                     .view{
+                        outline: none;
+                        border-left: none;
                         position: absolute;
                         height: 90%;
                         top: 0;
