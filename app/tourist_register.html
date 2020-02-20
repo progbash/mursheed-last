@@ -212,6 +212,7 @@
                                             <label for="Country">Country</label>
                                             <select required class="select2DropDown form-control required"
                                                 name="Country" asp-for="CountryId" asp-items="ViewBag.Countries">
+                                                <option></option>
                                                 <option>Azerbaijan</option>
                                                 <option>Turkey</option>
                                                 <option>Norway</option>
@@ -255,7 +256,7 @@
                                                 <!-- <div class="input-group-prepend"><span class="input-group-text"><i class="far fa-user"></i></span></div> -->
                                                 <input name="Password" required autocomplete="off" id="password_input"
                                                     style="width: 80% !important;" type="password" asp-for="Password"
-                                                    class="form-control formField required" placeholder="Your Password">
+                                                    class="passwordInput form-control formField required" placeholder="Your Password">
                                                 <button type="button" class="view"><img src="img/login/view-copy.svg"
                                                         alt=""></button>
                                             </div>
@@ -271,7 +272,7 @@
                                                 <input name="confirmPassword" required autocomplete="off"
                                                     id="confrim_password_input" style="width: 80% !important;"
                                                     type="password" asp-for="confirmPassword"
-                                                    class="form-control formField required"
+                                                    class="confirmPasswordInput form-control formField required"
                                                     placeholder="Confirm Your Password">
                                                 <button type="button" class="view_confrim"><img
                                                         src="img/login/view-copy.svg" alt=""></button>
