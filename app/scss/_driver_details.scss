@@ -241,7 +241,7 @@
                             .modal_click{
                                 cursor: pointer;
                                 .driver_details_cars_item{
-                                    height: 100px;
+                                    height: auto;
                                     width: 100%;
                                     background-size: cover;
                                     display: flex;
@@ -842,4 +842,15 @@
     }
 }
 
+}
+
+
+
+.profile_img{
+    width: 102px !important;
+    height: 102px !important;
+    img{
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
