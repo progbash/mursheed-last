@@ -376,3 +376,15 @@ label.error{
 section.body{
     width: 100% !important;
 }
+
+.profile_img{
+    width: 130px;
+    height: 130px;            
+    img{
+        width: 100%;
+        height: 100%;   
+    }
+}
+.profile_details{
+    margin-left: 10px !important;
+}
