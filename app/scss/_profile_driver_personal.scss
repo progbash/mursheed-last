@@ -178,12 +178,11 @@
 @media screen and (max-width: 767px){
     .profile{
         padding: 24px 32px;
+        flex-direction: column;
         .profile_img{
-            display: none;
-            // height: 65px !important;            
-            img{
-                // border-radius: 50%;   
-            }
+            width: 100% !important;
+            height: auto !important;
+            margin-bottom: 20px;
         }
     }
-}
+} 

@@ -150,3 +150,24 @@
         }
     }
 }
+
+@media screen and(max-width: 767px){
+    #guides_drivers{
+        @media screen and (max-width: 767px){
+            .profile{
+                padding: 24px 32px;
+                flex-direction: column;
+                .profile_img{
+                    width: 100% !important;
+                    height: auto !important;
+                    margin-bottom: 20px;
+                }
+            }
+        } 
+        .profile_details {
+            margin: auto !important;
+            word-break: break-all;
+            width: 90% !important;
+        }
+    }
+}
