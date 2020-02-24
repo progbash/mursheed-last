@@ -678,8 +678,11 @@
 }
 
 @media only screen and (max-width: 767px) {
+    label[for="tourist_name"]{
+        margin-top: 80px;
+    }
     .driver_details_cars_item{
-        height: 120px !important;
+        height: auto;
     }
     .close{
         font-size: 2em !important;
@@ -747,6 +750,7 @@
                 }
                 .driver_details_cars_item {
                     height: auto !important;
+                    margin-bottom: 20px;
                     img {
                         height: 100% !important;
                     }
