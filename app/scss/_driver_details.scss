@@ -1,4 +1,17 @@
 #driver_details {
+    .driver-details-overlay{
+        span{
+            color: white;
+            font-size: 2em;
+        }
+        .modal-header{
+            border: none;
+        }
+        .modal-content{
+            background: transparent;
+            border: none;
+        }
+    }
     .person_details{
         display: flex;
         justify-content: space-between;
